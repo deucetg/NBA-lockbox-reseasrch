@@ -32,7 +32,8 @@ jobs:
 
       - name: Collect NBA play-by-play
         run: python nba_collector.py
-
+      - name: Collect NBA player box scores
+        run: python nba_boxscore_collector.py
       - name: Validate database
         run: |
           python - <<'PY'
