@@ -1,0 +1,130 @@
+name: NBA LOCKBOX Historical Backfill
+
+on:
+  workflow_dispatch:
+    inputs:
+      start_date:
+        description: Start date YYYYMMDD
+        required: true
+        default: '20261027'
+      end_date:
+        description: End date YYYYMMDD
+        required: true
+        default: '20261105'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: nba-lockbox-daily
+  cancel-in-progress: false
+
+jobs:
+  backfill:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Collect historical play-by-play
+        env:
+          START_DATE: ${{ inputs.start_date }}
+          END_DATE: ${{ inputs.end_date }}
+        run: |
+          python - <<'PY'
+          import os, subprocess, sys
+          from datetime import datetime, timedelta
+
+          a = datetime.strptime(
+              os.environ['START_DATE'], '%Y%m%d'
+          )
+          b = datetime.strptime(
+              os.environ['END_DATE'], '%Y%m%d'
+          )
+
+          if a > b or (b-a).days > 45:
+              raise ValueError('Invalid date range')
+
+          day = a
+          while day <= b:
+              date = day.strftime('%Y%m%d')
+              print('Collecting', date, flush=True)
+              subprocess.run(
+                  [sys.executable, 'nba_collector.py', date],
+                  check=True
+              )
+              day += timedelta(days=1)
+          PY
+
+      - name: Import pending box scores
+        run: |
+          python - <<'PY'
+          import sqlite3, subprocess, sys
+
+          for batch in range(20):
+              subprocess.run(
+                  [sys.executable, 'nba_boxscore_collector.py'],
+                  check=True
+              )
+
+              with sqlite3.connect(
+                  'data/nba_lockbox.sqlite'
+              ) as db:
+                  pending = db.execute('''
+                      SELECT COUNT(*) FROM games
+                      WHERE game_id NOT IN (
+                          SELECT game_id FROM boxscore_imports
+                      )
+                  ''').fetchone()[0]
+
+              print('Pending games:', pending)
+
+              if pending == 0:
+                  break
+          else:
+              raise RuntimeError('Unfinished box-score backlog')
+          PY
+
+      - name: Report database totals
+        run: |
+          python - <<'PY'
+          import sqlite3
+
+          with sqlite3.connect(
+              'data/nba_lockbox.sqlite'
+          ) as db:
+              for table in (
+                  'games',
+                  'pbp_events',
+                  'player_boxscores'
+              ):
+                  count = db.execute(
+                      f'SELECT COUNT(*) FROM {table}'
+                  ).fetchone()[0]
+                  print(f'{table}: {count}')
+          PY
+
+      - name: Save database backup
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: nba-lockbox-backfill-db
+          path: data/nba_lockbox.sqlite
+          retention-days: 30
+
+      - name: Save research database
+        if: always()
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/nba_lockbox.sqlite
+          if ! git diff --cached --quiet; then
+            git commit -m 'Backfill NBA research data'
+            git push
+          fi
