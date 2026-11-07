@@ -70,8 +70,14 @@ def parse_players(game_id, summary):
                 athlete = entry.get("athlete", {})
                 player_id = athlete.get("id")
 
+                
                 if not player_id:
-                    raise ValueError("Missing player ID")
+                    print(
+                        f"WARNING: Skipping player entry without ID "
+                        f"in game {game_id}: "
+                        f"{athlete.get('displayName', 'Unknown')}"
+                    )
+                    continue
 
                 fg_m, fg_a = shooting(stats, "FG")
                 tp_m, tp_a = shooting(stats, "3PT")
