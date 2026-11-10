@@ -70,7 +70,26 @@ jobs:
 
           PY
 
-      - name: Upload quarter research
+      
+      - name: Verify against official ESPN quarter scores
+        run: python nba_quarter_verify.py --delay 0.4
+
+      - name: Validate official verification report
+        run: |
+          python - <<'PY'
+          import csv
+          from pathlib import Path
+
+          path = Path("exports/quarters/quarter_verification.csv")
+          assert path.exists(), "Verification report missing"
+
+          with path.open(encoding="utf-8") as file:
+              rows = list(csv.DictReader(file))
+
+          assert rows, "Verification report empty"
+          print(f"Official verification rows: {len(rows)}")
+          PY
+
         uses: actions/upload-artifact@v4
         with:
           name: nba-quarter-research
