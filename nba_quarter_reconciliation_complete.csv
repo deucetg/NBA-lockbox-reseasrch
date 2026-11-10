@@ -1,0 +1,1012 @@
+game_id,date,matchup,period,original_pbp_home,original_pbp_away,corrected_home,corrected_away,original_status,official_espn_source,nba_com_crosscheck,nba_com_url,research_status,raw_pbp_unchanged
+401909287,20261106,Washington Wizards @ Atlanta Hawks,1,28,32,28,32,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909287,20261106,Washington Wizards @ Atlanta Hawks,2,38,27,38,27,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909287,20261106,Washington Wizards @ Atlanta Hawks,3,39,35,39,35,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909287,20261106,Washington Wizards @ Atlanta Hawks,4,34,38,34,38,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909288,20261106,Boston Celtics @ Charlotte Hornets,1,20,40,20,40,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909288,20261106,Boston Celtics @ Charlotte Hornets,2,19,30,19,30,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909288,20261106,Boston Celtics @ Charlotte Hornets,3,18,26,18,26,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909288,20261106,Boston Celtics @ Charlotte Hornets,4,23,23,23,23,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909289,20261106,Philadelphia 76ers @ Cleveland Cavaliers,1,33,22,33,22,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909289,20261106,Philadelphia 76ers @ Cleveland Cavaliers,2,29,32,29,32,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909289,20261106,Philadelphia 76ers @ Cleveland Cavaliers,3,29,20,29,20,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909289,20261106,Philadelphia 76ers @ Cleveland Cavaliers,4,28,21,28,21,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909290,20261106,Utah Jazz @ Dallas Mavericks,1,26,28,26,28,verified,ESPN summary linescores,confirmed_team_quarter_linescore,https://www.nba.com/game/uta-vs-dal-0022600028,NBA_verified,yes
+401909290,20261106,Utah Jazz @ Dallas Mavericks,2,31,29,31,29,verified,ESPN summary linescores,confirmed_team_quarter_linescore,https://www.nba.com/game/uta-vs-dal-0022600028,NBA_verified,yes
+401909290,20261106,Utah Jazz @ Dallas Mavericks,3,32,19,32,19,verified,ESPN summary linescores,confirmed_team_quarter_linescore,https://www.nba.com/game/uta-vs-dal-0022600028,NBA_verified,yes
+401909290,20261106,Utah Jazz @ Dallas Mavericks,4,,,23,24,pbp_unresolved,ESPN summary linescores,confirmed_team_quarter_linescore,https://www.nba.com/game/uta-vs-dal-0022600028,NBA_verified_official_linescore,yes
+401909291,20261106,Oklahoma City Thunder @ Memphis Grizzlies,1,28,35,28,35,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909291,20261106,Oklahoma City Thunder @ Memphis Grizzlies,2,21,36,21,36,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909291,20261106,Oklahoma City Thunder @ Memphis Grizzlies,3,27,27,27,27,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909291,20261106,Oklahoma City Thunder @ Memphis Grizzlies,4,21,30,21,30,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909292,20261106,Toronto Raptors @ Milwaukee Bucks,1,29,24,29,24,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909292,20261106,Toronto Raptors @ Milwaukee Bucks,2,31,27,31,27,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909292,20261106,Toronto Raptors @ Milwaukee Bucks,3,27,38,27,38,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909292,20261106,Toronto Raptors @ Milwaukee Bucks,4,20,32,20,32,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909293,20261106,Minnesota Timberwolves @ New Orleans Pelicans,1,30,27,30,27,verified,ESPN summary linescores,confirmed_team_quarter_linescore,https://www.nba.com/game/min-vs-nop-0022600031?lid=f8s3gs6d4aa4%5C,NBA_verified,yes
+401909293,20261106,Minnesota Timberwolves @ New Orleans Pelicans,2,21,30,21,30,verified,ESPN summary linescores,confirmed_team_quarter_linescore,https://www.nba.com/game/min-vs-nop-0022600031?lid=f8s3gs6d4aa4%5C,NBA_verified,yes
+401909293,20261106,Minnesota Timberwolves @ New Orleans Pelicans,3,28,20,28,20,verified,ESPN summary linescores,confirmed_team_quarter_linescore,https://www.nba.com/game/min-vs-nop-0022600031?lid=f8s3gs6d4aa4%5C,NBA_verified,yes
+401909293,20261106,Minnesota Timberwolves @ New Orleans Pelicans,4,32,38,30,38,mismatch,ESPN summary linescores,confirmed_team_quarter_linescore,https://www.nba.com/game/min-vs-nop-0022600031,NBA_verified_official_linescore,yes
+401909294,20261106,Portland Trail Blazers @ Los Angeles Lakers,1,20,27,20,29,mismatch,ESPN summary linescores,confirmed_team_quarter_linescore,https://www.nba.com/game/por-vs-lal-0022600032,NBA_verified_official_linescore,yes
+401909294,20261106,Portland Trail Blazers @ Los Angeles Lakers,2,33,31,33,31,verified,ESPN summary linescores,confirmed_team_quarter_linescore,https://www.nba.com/game/por-vs-lal-0022600032,NBA_verified,yes
+401909294,20261106,Portland Trail Blazers @ Los Angeles Lakers,3,34,17,34,15,mismatch,ESPN summary linescores,confirmed_team_quarter_linescore,https://www.nba.com/game/por-vs-lal-0022600032,NBA_verified_official_linescore,yes
+401909294,20261106,Portland Trail Blazers @ Los Angeles Lakers,4,37,43,37,43,verified,ESPN summary linescores,confirmed_team_quarter_linescore,https://www.nba.com/game/por-vs-lal-0022600032,NBA_verified,yes
+401909295,20261106,San Antonio Spurs @ Sacramento Kings,1,29,38,29,38,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909295,20261106,San Antonio Spurs @ Sacramento Kings,2,27,37,27,37,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909295,20261106,San Antonio Spurs @ Sacramento Kings,3,24,24,24,24,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909295,20261106,San Antonio Spurs @ Sacramento Kings,4,29,25,29,25,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909877,20261027,Brooklyn Nets @ Boston Celtics,1,26,31,26,31,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909877,20261027,Brooklyn Nets @ Boston Celtics,2,30,30,30,30,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909877,20261027,Brooklyn Nets @ Boston Celtics,3,30,21,30,21,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909877,20261027,Brooklyn Nets @ Boston Celtics,4,31,35,31,35,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909877,20261027,Brooklyn Nets @ Boston Celtics,5,8,7,8,7,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909878,20261027,Detroit Pistons @ New York Knicks,1,25,38,25,38,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909878,20261027,Detroit Pistons @ New York Knicks,2,26,12,26,12,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909878,20261027,Detroit Pistons @ New York Knicks,3,37,13,37,13,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909878,20261027,Detroit Pistons @ New York Knicks,4,23,34,23,34,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909879,20261027,Sacramento Kings @ San Antonio Spurs,1,39,29,39,29,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909879,20261027,Sacramento Kings @ San Antonio Spurs,2,41,25,41,25,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909879,20261027,Sacramento Kings @ San Antonio Spurs,3,27,26,27,26,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909879,20261027,Sacramento Kings @ San Antonio Spurs,4,23,23,23,23,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909880,20261027,Portland Trail Blazers @ Los Angeles Lakers,1,38,32,38,32,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909880,20261027,Portland Trail Blazers @ Los Angeles Lakers,2,35,38,35,36,mismatch,ESPN summary linescores,confirmed_team_quarter_linescore,https://www.nba.com/game/por-vs-lal-0022600131,NBA_verified_official_linescore,yes
+401909880,20261027,Portland Trail Blazers @ Los Angeles Lakers,3,,,30,34,pbp_unresolved,ESPN summary linescores,confirmed_team_quarter_linescore,https://www.nba.com/game/por-vs-lal-0022600131,NBA_verified_official_linescore,yes
+401909880,20261027,Portland Trail Blazers @ Los Angeles Lakers,4,,,26,34,pbp_unresolved,ESPN summary linescores,confirmed_team_quarter_linescore,https://www.nba.com/game/por-vs-lal-0022600131,NBA_verified_official_linescore,yes
+401909881,20261028,Miami Heat @ Atlanta Hawks,1,25,34,25,34,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909881,20261028,Miami Heat @ Atlanta Hawks,2,31,35,31,35,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909881,20261028,Miami Heat @ Atlanta Hawks,3,29,28,29,28,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909881,20261028,Miami Heat @ Atlanta Hawks,4,32,32,32,32,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909882,20261028,Washington Wizards @ Cleveland Cavaliers,1,34,42,34,42,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909882,20261028,Washington Wizards @ Cleveland Cavaliers,2,25,27,25,27,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909882,20261028,Washington Wizards @ Cleveland Cavaliers,3,33,23,33,23,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909882,20261028,Washington Wizards @ Cleveland Cavaliers,4,29,19,29,19,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909883,20261028,Charlotte Hornets @ Detroit Pistons,1,21,22,21,22,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909883,20261028,Charlotte Hornets @ Detroit Pistons,2,23,29,23,29,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909883,20261028,Charlotte Hornets @ Detroit Pistons,3,32,19,32,19,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909883,20261028,Charlotte Hornets @ Detroit Pistons,4,21,19,21,19,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909884,20261028,Philadelphia 76ers @ Indiana Pacers,1,25,25,25,25,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909884,20261028,Philadelphia 76ers @ Indiana Pacers,2,27,37,27,37,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909884,20261028,Philadelphia 76ers @ Indiana Pacers,3,36,13,36,13,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909884,20261028,Philadelphia 76ers @ Indiana Pacers,4,21,39,21,39,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909885,20261028,Orlando Magic @ Toronto Raptors,1,32,25,32,25,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909885,20261028,Orlando Magic @ Toronto Raptors,2,37,28,37,28,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909885,20261028,Orlando Magic @ Toronto Raptors,3,34,23,34,23,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909885,20261028,Orlando Magic @ Toronto Raptors,4,26,23,26,23,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909886,20261028,New York Knicks @ Chicago Bulls,1,33,34,33,34,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909886,20261028,New York Knicks @ Chicago Bulls,2,29,22,29,22,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909886,20261028,New York Knicks @ Chicago Bulls,3,34,34,34,34,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909886,20261028,New York Knicks @ Chicago Bulls,4,31,43,31,43,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909887,20261028,Houston Rockets @ Milwaukee Bucks,1,21,23,21,23,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909887,20261028,Houston Rockets @ Milwaukee Bucks,2,14,34,14,34,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909887,20261028,Houston Rockets @ Milwaukee Bucks,3,34,38,34,38,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909887,20261028,Houston Rockets @ Milwaukee Bucks,4,31,37,31,37,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909888,20261028,Golden State Warriors @ Minnesota Timberwolves,1,23,30,23,30,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909888,20261028,Golden State Warriors @ Minnesota Timberwolves,2,25,34,25,34,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909888,20261028,Golden State Warriors @ Minnesota Timberwolves,3,33,29,33,29,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909888,20261028,Golden State Warriors @ Minnesota Timberwolves,4,33,26,33,26,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909889,20261028,Denver Nuggets @ New Orleans Pelicans,1,18,37,18,37,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909889,20261028,Denver Nuggets @ New Orleans Pelicans,2,27,20,27,20,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909889,20261028,Denver Nuggets @ New Orleans Pelicans,3,28,22,28,22,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909889,20261028,Denver Nuggets @ New Orleans Pelicans,4,18,25,18,25,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909890,20261028,San Antonio Spurs @ Utah Jazz,1,32,22,32,22,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909890,20261028,San Antonio Spurs @ Utah Jazz,2,23,29,23,29,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909890,20261028,San Antonio Spurs @ Utah Jazz,3,30,34,30,34,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909890,20261028,San Antonio Spurs @ Utah Jazz,4,20,20,20,20,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909890,20261028,San Antonio Spurs @ Utah Jazz,5,6,12,6,12,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909891,20261028,Oklahoma City Thunder @ Dallas Mavericks,1,33,30,33,30,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909891,20261028,Oklahoma City Thunder @ Dallas Mavericks,2,32,29,32,29,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909891,20261028,Oklahoma City Thunder @ Dallas Mavericks,3,29,22,29,22,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909891,20261028,Oklahoma City Thunder @ Dallas Mavericks,4,26,15,26,15,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909892,20261028,Los Angeles Lakers @ LA Clippers,1,22,25,22,25,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909892,20261028,Los Angeles Lakers @ LA Clippers,2,16,31,16,31,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909892,20261028,Los Angeles Lakers @ LA Clippers,3,28,29,28,29,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909892,20261028,Los Angeles Lakers @ LA Clippers,4,21,18,21,18,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909893,20261029,Cleveland Cavaliers @ Atlanta Hawks,1,16,28,16,28,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909893,20261029,Cleveland Cavaliers @ Atlanta Hawks,2,30,16,30,16,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909893,20261029,Cleveland Cavaliers @ Atlanta Hawks,3,43,38,43,38,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909893,20261029,Cleveland Cavaliers @ Atlanta Hawks,4,25,29,25,29,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909894,20261029,Sacramento Kings @ New Orleans Pelicans,1,24,30,24,30,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909894,20261029,Sacramento Kings @ New Orleans Pelicans,2,39,31,39,31,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909894,20261029,Sacramento Kings @ New Orleans Pelicans,3,39,27,39,27,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909894,20261029,Sacramento Kings @ New Orleans Pelicans,4,30,32,30,32,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909895,20261029,Memphis Grizzlies @ Portland Trail Blazers,1,25,25,25,25,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909895,20261029,Memphis Grizzlies @ Portland Trail Blazers,2,33,33,33,33,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909895,20261029,Memphis Grizzlies @ Portland Trail Blazers,3,25,33,25,33,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909895,20261029,Memphis Grizzlies @ Portland Trail Blazers,4,20,33,20,33,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909277,20261030,Charlotte Hornets @ Washington Wizards,1,22,26,22,26,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909277,20261030,Charlotte Hornets @ Washington Wizards,2,29,20,29,20,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909277,20261030,Charlotte Hornets @ Washington Wizards,3,28,13,28,13,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909277,20261030,Charlotte Hornets @ Washington Wizards,4,16,20,16,20,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909278,20261030,Chicago Bulls @ Boston Celtics,1,44,25,44,25,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909278,20261030,Chicago Bulls @ Boston Celtics,2,34,24,34,24,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909278,20261030,Chicago Bulls @ Boston Celtics,3,21,25,21,25,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909278,20261030,Chicago Bulls @ Boston Celtics,4,26,37,26,37,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909279,20261030,Detroit Pistons @ Brooklyn Nets,1,28,21,28,21,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909279,20261030,Detroit Pistons @ Brooklyn Nets,2,21,35,21,35,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909279,20261030,Detroit Pistons @ Brooklyn Nets,3,17,36,17,36,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909279,20261030,Detroit Pistons @ Brooklyn Nets,4,28,18,28,18,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909280,20261030,New York Knicks @ Philadelphia 76ers,1,29,21,29,21,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909280,20261030,New York Knicks @ Philadelphia 76ers,2,24,23,24,23,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909280,20261030,New York Knicks @ Philadelphia 76ers,3,24,24,24,24,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909280,20261030,New York Knicks @ Philadelphia 76ers,4,21,25,21,25,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909281,20261030,Orlando Magic @ Toronto Raptors,1,27,31,27,31,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909281,20261030,Orlando Magic @ Toronto Raptors,2,28,33,28,33,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909281,20261030,Orlando Magic @ Toronto Raptors,3,33,31,33,31,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909281,20261030,Orlando Magic @ Toronto Raptors,4,26,26,26,26,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909282,20261030,Indiana Pacers @ Miami Heat,1,36,42,36,42,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909282,20261030,Indiana Pacers @ Miami Heat,2,32,19,32,19,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909282,20261030,Indiana Pacers @ Miami Heat,3,35,27,35,27,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909282,20261030,Indiana Pacers @ Miami Heat,4,42,37,42,37,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909283,20261030,Houston Rockets @ Dallas Mavericks,1,27,20,27,20,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909283,20261030,Houston Rockets @ Dallas Mavericks,2,17,31,17,31,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909283,20261030,Houston Rockets @ Dallas Mavericks,3,32,33,32,33,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909283,20261030,Houston Rockets @ Dallas Mavericks,4,40,27,40,27,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909284,20261030,LA Clippers @ Minnesota Timberwolves,1,34,24,34,24,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909284,20261030,LA Clippers @ Minnesota Timberwolves,2,35,32,35,32,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909284,20261030,LA Clippers @ Minnesota Timberwolves,3,29,25,29,25,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909284,20261030,LA Clippers @ Minnesota Timberwolves,4,29,20,29,20,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909285,20261030,Los Angeles Lakers @ Golden State Warriors,1,15,38,15,38,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909285,20261030,Los Angeles Lakers @ Golden State Warriors,2,38,15,38,15,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909285,20261030,Los Angeles Lakers @ Golden State Warriors,3,32,27,32,27,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909285,20261030,Los Angeles Lakers @ Golden State Warriors,4,27,15,27,15,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909286,20261030,Denver Nuggets @ Phoenix Suns,1,37,32,37,32,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909286,20261030,Denver Nuggets @ Phoenix Suns,2,30,39,30,39,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909286,20261030,Denver Nuggets @ Phoenix Suns,3,26,32,26,32,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909286,20261030,Denver Nuggets @ Phoenix Suns,4,27,24,27,24,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909896,20261031,Portland Trail Blazers @ Utah Jazz,1,18,27,18,27,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909896,20261031,Portland Trail Blazers @ Utah Jazz,2,24,32,24,32,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909896,20261031,Portland Trail Blazers @ Utah Jazz,3,22,29,22,29,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909896,20261031,Portland Trail Blazers @ Utah Jazz,4,26,24,26,24,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909897,20261031,Philadelphia 76ers @ Charlotte Hornets,1,37,27,37,27,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909897,20261031,Philadelphia 76ers @ Charlotte Hornets,2,17,30,17,30,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909897,20261031,Philadelphia 76ers @ Charlotte Hornets,3,29,20,29,20,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909897,20261031,Philadelphia 76ers @ Charlotte Hornets,4,21,32,21,32,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909898,20261031,Atlanta Hawks @ New Orleans Pelicans,1,35,18,35,18,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909898,20261031,Atlanta Hawks @ New Orleans Pelicans,2,28,30,28,30,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909898,20261031,Atlanta Hawks @ New Orleans Pelicans,3,29,26,29,26,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909898,20261031,Atlanta Hawks @ New Orleans Pelicans,4,29,25,29,25,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909899,20261031,Sacramento Kings @ Memphis Grizzlies,1,27,21,27,21,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909899,20261031,Sacramento Kings @ Memphis Grizzlies,2,39,34,39,34,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909899,20261031,Sacramento Kings @ Memphis Grizzlies,3,42,25,42,25,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909899,20261031,Sacramento Kings @ Memphis Grizzlies,4,28,25,28,25,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909900,20261031,Cleveland Cavaliers @ Milwaukee Bucks,1,25,24,25,24,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909900,20261031,Cleveland Cavaliers @ Milwaukee Bucks,2,21,48,21,48,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909900,20261031,Cleveland Cavaliers @ Milwaukee Bucks,3,30,37,30,37,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909900,20261031,Cleveland Cavaliers @ Milwaukee Bucks,4,35,27,35,27,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909901,20261031,Minnesota Timberwolves @ San Antonio Spurs,1,34,28,34,28,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909901,20261031,Minnesota Timberwolves @ San Antonio Spurs,2,26,33,26,33,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909901,20261031,Minnesota Timberwolves @ San Antonio Spurs,3,33,27,33,27,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909901,20261031,Minnesota Timberwolves @ San Antonio Spurs,4,28,23,28,23,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909902,20261031,Oklahoma City Thunder @ Houston Rockets,1,35,26,35,26,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909902,20261031,Oklahoma City Thunder @ Houston Rockets,2,27,25,27,25,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909902,20261031,Oklahoma City Thunder @ Houston Rockets,3,30,24,30,24,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909902,20261031,Oklahoma City Thunder @ Houston Rockets,4,27,23,27,23,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909903,20261101,Boston Celtics @ Orlando Magic,1,23,24,23,24,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909903,20261101,Boston Celtics @ Orlando Magic,2,27,31,27,31,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909903,20261101,Boston Celtics @ Orlando Magic,3,24,22,24,22,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909903,20261101,Boston Celtics @ Orlando Magic,4,23,31,23,31,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909904,20261101,Brooklyn Nets @ Indiana Pacers,1,19,20,19,20,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909904,20261101,Brooklyn Nets @ Indiana Pacers,2,21,23,21,23,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909904,20261101,Brooklyn Nets @ Indiana Pacers,3,22,28,22,28,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909904,20261101,Brooklyn Nets @ Indiana Pacers,4,28,27,28,27,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909905,20261101,LA Clippers @ Golden State Warriors,1,29,37,29,37,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909905,20261101,LA Clippers @ Golden State Warriors,2,34,20,34,20,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909905,20261101,LA Clippers @ Golden State Warriors,3,29,28,29,28,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909905,20261101,LA Clippers @ Golden State Warriors,4,32,27,32,27,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909906,20261101,Toronto Raptors @ Los Angeles Lakers,1,36,23,36,23,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909906,20261101,Toronto Raptors @ Los Angeles Lakers,2,30,31,30,31,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909906,20261101,Toronto Raptors @ Los Angeles Lakers,3,38,28,38,28,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909906,20261101,Toronto Raptors @ Los Angeles Lakers,4,27,43,27,43,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909907,20261102,Oklahoma City Thunder @ Cleveland Cavaliers,1,30,26,30,26,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909907,20261102,Oklahoma City Thunder @ Cleveland Cavaliers,2,18,33,18,33,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909907,20261102,Oklahoma City Thunder @ Cleveland Cavaliers,3,36,31,36,31,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909907,20261102,Oklahoma City Thunder @ Cleveland Cavaliers,4,28,27,28,27,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909908,20261102,Detroit Pistons @ Charlotte Hornets,1,24,27,24,27,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909908,20261102,Detroit Pistons @ Charlotte Hornets,2,30,38,30,38,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909908,20261102,Detroit Pistons @ Charlotte Hornets,3,21,33,21,33,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909908,20261102,Detroit Pistons @ Charlotte Hornets,4,16,26,16,26,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909909,20261102,Atlanta Hawks @ Indiana Pacers,1,29,37,29,37,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909909,20261102,Atlanta Hawks @ Indiana Pacers,2,27,31,27,31,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909909,20261102,Atlanta Hawks @ Indiana Pacers,3,23,19,23,19,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909909,20261102,Atlanta Hawks @ Indiana Pacers,4,25,21,25,21,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909910,20261102,Brooklyn Nets @ New York Knicks,1,27,21,27,21,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909910,20261102,Brooklyn Nets @ New York Knicks,2,24,23,24,23,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909910,20261102,Brooklyn Nets @ New York Knicks,3,24,35,24,35,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909910,20261102,Brooklyn Nets @ New York Knicks,4,28,11,28,11,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909911,20261102,Washington Wizards @ Orlando Magic,1,33,28,33,28,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909911,20261102,Washington Wizards @ Orlando Magic,2,26,32,26,32,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909911,20261102,Washington Wizards @ Orlando Magic,3,9,19,9,19,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909911,20261102,Washington Wizards @ Orlando Magic,4,26,24,26,24,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909912,20261102,Chicago Bulls @ Philadelphia 76ers,1,30,23,30,23,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909912,20261102,Chicago Bulls @ Philadelphia 76ers,2,34,36,34,36,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909912,20261102,Chicago Bulls @ Philadelphia 76ers,3,26,20,26,20,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909912,20261102,Chicago Bulls @ Philadelphia 76ers,4,36,28,36,28,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909913,20261102,Sacramento Kings @ Dallas Mavericks,1,18,19,18,19,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909913,20261102,Sacramento Kings @ Dallas Mavericks,2,35,35,35,35,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909913,20261102,Sacramento Kings @ Dallas Mavericks,3,21,27,21,27,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909913,20261102,Sacramento Kings @ Dallas Mavericks,4,26,34,26,34,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909914,20261102,New Orleans Pelicans @ Memphis Grizzlies,1,31,34,31,34,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909914,20261102,New Orleans Pelicans @ Memphis Grizzlies,2,31,25,31,25,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909914,20261102,New Orleans Pelicans @ Memphis Grizzlies,3,33,41,33,41,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909914,20261102,New Orleans Pelicans @ Memphis Grizzlies,4,29,24,29,24,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909914,20261102,New Orleans Pelicans @ Memphis Grizzlies,5,10,11,10,11,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909915,20261102,Milwaukee Bucks @ Minnesota Timberwolves,1,29,18,29,18,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909915,20261102,Milwaukee Bucks @ Minnesota Timberwolves,2,19,29,19,29,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909915,20261102,Milwaukee Bucks @ Minnesota Timberwolves,3,32,29,32,29,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909915,20261102,Milwaukee Bucks @ Minnesota Timberwolves,4,32,24,32,24,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909916,20261102,Boston Celtics @ Houston Rockets,1,29,29,29,29,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909916,20261102,Boston Celtics @ Houston Rockets,2,28,21,28,21,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909916,20261102,Boston Celtics @ Houston Rockets,3,25,23,25,23,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909916,20261102,Boston Celtics @ Houston Rockets,4,27,20,27,20,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909917,20261102,Utah Jazz @ San Antonio Spurs,1,27,16,27,16,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909917,20261102,Utah Jazz @ San Antonio Spurs,2,,,32,33,pbp_unresolved,ESPN summary linescores,confirmed_team_quarter_linescore,https://www.nba.com/game/uta-vs-sas-0022600168,NBA_verified_official_linescore,yes
+401909917,20261102,Utah Jazz @ San Antonio Spurs,3,,,35,20,pbp_unresolved,ESPN summary linescores,confirmed_team_quarter_linescore,https://www.nba.com/game/uta-vs-sas-0022600168,NBA_verified_official_linescore,yes
+401909917,20261102,Utah Jazz @ San Antonio Spurs,4,25,28,25,28,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909918,20261102,Portland Trail Blazers @ Denver Nuggets,1,31,19,31,19,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909918,20261102,Portland Trail Blazers @ Denver Nuggets,2,35,39,35,39,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909918,20261102,Portland Trail Blazers @ Denver Nuggets,3,21,27,21,27,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909918,20261102,Portland Trail Blazers @ Denver Nuggets,4,23,33,23,33,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909919,20261102,Phoenix Suns @ Golden State Warriors,1,19,31,19,31,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909919,20261102,Phoenix Suns @ Golden State Warriors,2,32,26,32,26,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909919,20261102,Phoenix Suns @ Golden State Warriors,3,42,36,42,36,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909919,20261102,Phoenix Suns @ Golden State Warriors,4,23,20,23,20,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909920,20261102,Toronto Raptors @ LA Clippers,1,33,22,33,22,verified,ESPN summary linescores,confirmed,https://www.nba.com/game/tor-vs-lac-0022600171,NBA_confirmed,yes
+401909920,20261102,Toronto Raptors @ LA Clippers,2,28,30,30,30,mismatch,ESPN summary linescores,confirmed_team_quarter_linescore,https://www.nba.com/game/tor-vs-lac-0022600171,NBA_verified_official_linescore,yes
+401909920,20261102,Toronto Raptors @ LA Clippers,3,30,26,28,26,mismatch,ESPN summary linescores,confirmed_team_quarter_linescore,https://www.nba.com/game/tor-vs-lac-0022600171,NBA_verified_official_linescore,yes
+401909920,20261102,Toronto Raptors @ LA Clippers,4,27,47,27,47,verified,ESPN summary linescores,confirmed,https://www.nba.com/game/tor-vs-lac-0022600171,NBA_confirmed,yes
+401909921,20261102,Miami Heat @ Los Angeles Lakers,1,37,30,37,30,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909921,20261102,Miami Heat @ Los Angeles Lakers,2,42,42,42,42,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909921,20261102,Miami Heat @ Los Angeles Lakers,3,32,21,32,21,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909921,20261102,Miami Heat @ Los Angeles Lakers,4,27,24,27,24,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909922,20261104,Philadelphia 76ers @ Detroit Pistons,1,21,29,21,29,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909922,20261104,Philadelphia 76ers @ Detroit Pistons,2,21,27,21,27,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909922,20261104,Philadelphia 76ers @ Detroit Pistons,3,33,33,33,35,mismatch,ESPN summary linescores,confirmed_team_quarter_linescore,https://www.nba.com/game/phi-vs-det-0022600173,NBA_verified_official_linescore,yes
+401909922,20261104,Philadelphia 76ers @ Detroit Pistons,4,31,23,31,21,mismatch,ESPN summary linescores,confirmed_team_quarter_linescore,https://www.nba.com/game/phi-vs-det-0022600173,NBA_verified_official_linescore,yes
+401909923,20261104,Atlanta Hawks @ Washington Wizards,1,32,37,32,37,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909923,20261104,Atlanta Hawks @ Washington Wizards,2,29,31,29,31,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909923,20261104,Atlanta Hawks @ Washington Wizards,3,24,25,24,25,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909923,20261104,Atlanta Hawks @ Washington Wizards,4,20,27,20,27,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909924,20261104,Milwaukee Bucks @ Boston Celtics,1,28,14,28,14,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909924,20261104,Milwaukee Bucks @ Boston Celtics,2,34,27,34,27,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909924,20261104,Milwaukee Bucks @ Boston Celtics,3,25,38,25,38,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909924,20261104,Milwaukee Bucks @ Boston Celtics,4,22,23,22,23,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909925,20261104,Charlotte Hornets @ Brooklyn Nets,1,21,24,21,24,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909925,20261104,Charlotte Hornets @ Brooklyn Nets,2,29,33,29,33,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909925,20261104,Charlotte Hornets @ Brooklyn Nets,3,30,23,30,23,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909925,20261104,Charlotte Hornets @ Brooklyn Nets,4,34,24,34,24,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909926,20261104,Chicago Bulls @ New York Knicks,1,43,21,43,21,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909926,20261104,Chicago Bulls @ New York Knicks,2,41,31,41,31,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909926,20261104,Chicago Bulls @ New York Knicks,3,29,27,29,27,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909926,20261104,Chicago Bulls @ New York Knicks,4,22,26,22,26,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909927,20261104,Indiana Pacers @ Memphis Grizzlies,1,24,32,24,32,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909927,20261104,Indiana Pacers @ Memphis Grizzlies,2,28,22,28,22,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909927,20261104,Indiana Pacers @ Memphis Grizzlies,3,30,26,30,26,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909927,20261104,Indiana Pacers @ Memphis Grizzlies,4,21,27,21,27,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909928,20261104,Utah Jazz @ New Orleans Pelicans,1,24,24,24,24,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909928,20261104,Utah Jazz @ New Orleans Pelicans,2,18,13,18,13,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909928,20261104,Utah Jazz @ New Orleans Pelicans,3,28,43,28,43,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909928,20261104,Utah Jazz @ New Orleans Pelicans,4,34,24,34,24,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909928,20261104,Utah Jazz @ New Orleans Pelicans,5,16,9,16,9,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909929,20261104,Cleveland Cavaliers @ Oklahoma City Thunder,1,37,20,37,20,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909929,20261104,Cleveland Cavaliers @ Oklahoma City Thunder,2,23,24,23,24,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909929,20261104,Cleveland Cavaliers @ Oklahoma City Thunder,3,28,30,28,30,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909929,20261104,Cleveland Cavaliers @ Oklahoma City Thunder,4,36,42,36,42,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909930,20261104,Minnesota Timberwolves @ Houston Rockets,1,30,33,30,33,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909930,20261104,Minnesota Timberwolves @ Houston Rockets,2,27,24,27,24,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909930,20261104,Minnesota Timberwolves @ Houston Rockets,3,27,25,27,25,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909930,20261104,Minnesota Timberwolves @ Houston Rockets,4,23,35,23,35,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909931,20261104,Toronto Raptors @ Denver Nuggets,1,33,35,33,35,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909931,20261104,Toronto Raptors @ Denver Nuggets,2,31,32,31,32,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909931,20261104,Toronto Raptors @ Denver Nuggets,3,41,15,41,15,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909931,20261104,Toronto Raptors @ Denver Nuggets,4,23,27,23,27,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909932,20261104,Portland Trail Blazers @ Phoenix Suns,1,34,29,34,29,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909932,20261104,Portland Trail Blazers @ Phoenix Suns,2,25,43,25,43,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909932,20261104,Portland Trail Blazers @ Phoenix Suns,3,26,32,26,32,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909932,20261104,Portland Trail Blazers @ Phoenix Suns,4,34,28,34,28,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909933,20261104,Dallas Mavericks @ San Antonio Spurs,1,32,26,32,26,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909933,20261104,Dallas Mavericks @ San Antonio Spurs,2,36,25,36,25,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909933,20261104,Dallas Mavericks @ San Antonio Spurs,3,22,29,22,29,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909933,20261104,Dallas Mavericks @ San Antonio Spurs,4,22,31,22,31,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909934,20261104,Los Angeles Lakers @ Sacramento Kings,1,28,28,28,28,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909934,20261104,Los Angeles Lakers @ Sacramento Kings,2,26,33,26,33,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909934,20261104,Los Angeles Lakers @ Sacramento Kings,3,20,26,20,26,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909934,20261104,Los Angeles Lakers @ Sacramento Kings,4,29,29,29,29,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909935,20261104,Miami Heat @ LA Clippers,1,24,33,24,33,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909935,20261104,Miami Heat @ LA Clippers,2,43,19,43,19,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909935,20261104,Miami Heat @ LA Clippers,3,20,26,20,26,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909935,20261104,Miami Heat @ LA Clippers,4,20,29,20,29,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909935,20261104,Miami Heat @ LA Clippers,5,9,10,9,10,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909936,20261105,Orlando Magic @ Phoenix Suns,1,33,26,33,26,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909936,20261105,Orlando Magic @ Phoenix Suns,2,30,25,30,25,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909936,20261105,Orlando Magic @ Phoenix Suns,3,33,22,33,22,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909936,20261105,Orlando Magic @ Phoenix Suns,4,21,31,21,31,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909937,20261105,Miami Heat @ Golden State Warriors,1,26,29,26,29,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909937,20261105,Miami Heat @ Golden State Warriors,2,27,24,27,24,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909937,20261105,Miami Heat @ Golden State Warriors,3,38,23,38,23,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909937,20261105,Miami Heat @ Golden State Warriors,4,29,24,29,24,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909088,20261020,Boston Celtics @ Detroit Pistons,1,27,28,27,28,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909088,20261020,Boston Celtics @ Detroit Pistons,2,18,30,18,30,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909088,20261020,Boston Celtics @ Detroit Pistons,3,37,30,37,30,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909088,20261020,Boston Celtics @ Detroit Pistons,4,39,25,39,25,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909089,20261020,Philadelphia 76ers @ New York Knicks,1,25,23,25,23,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909089,20261020,Philadelphia 76ers @ New York Knicks,2,33,31,33,31,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909089,20261020,Philadelphia 76ers @ New York Knicks,3,18,29,18,29,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909089,20261020,Philadelphia 76ers @ New York Knicks,4,24,23,24,23,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909090,20261020,Oklahoma City Thunder @ San Antonio Spurs,1,28,34,28,34,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909090,20261020,Oklahoma City Thunder @ San Antonio Spurs,2,15,31,16,31,mismatch,ESPN summary linescores,confirmed_team_quarter_linescore,https://www.nba.com/game/okc-vs-sas-0022600003,NBA_verified_official_linescore,yes
+401909090,20261020,Oklahoma City Thunder @ San Antonio Spurs,3,37,28,36,28,mismatch,ESPN summary linescores,confirmed_team_quarter_linescore,https://www.nba.com/game/okc-vs-sas-0022600003,NBA_verified_official_linescore,yes
+401909090,20261020,Oklahoma City Thunder @ San Antonio Spurs,4,24,23,24,23,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909834,20261021,Atlanta Hawks @ Orlando Magic,1,33,28,33,28,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909834,20261021,Atlanta Hawks @ Orlando Magic,2,29,44,29,44,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909834,20261021,Atlanta Hawks @ Orlando Magic,3,38,27,38,27,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909834,20261021,Atlanta Hawks @ Orlando Magic,4,25,33,25,33,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909835,20261021,Milwaukee Bucks @ Washington Wizards,1,25,23,25,23,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909835,20261021,Milwaukee Bucks @ Washington Wizards,2,26,33,26,33,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909835,20261021,Milwaukee Bucks @ Washington Wizards,3,39,37,39,37,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909835,20261021,Milwaukee Bucks @ Washington Wizards,4,38,23,38,23,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909091,20261021,Minnesota Timberwolves @ Miami Heat,1,32,34,32,34,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909091,20261021,Minnesota Timberwolves @ Miami Heat,2,27,35,27,35,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909091,20261021,Minnesota Timberwolves @ Miami Heat,3,22,30,22,30,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909091,20261021,Minnesota Timberwolves @ Miami Heat,4,25,32,25,32,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909836,20261021,Charlotte Hornets @ Brooklyn Nets,1,23,27,23,27,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909836,20261021,Charlotte Hornets @ Brooklyn Nets,2,25,27,25,27,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909836,20261021,Charlotte Hornets @ Brooklyn Nets,3,33,32,33,32,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909836,20261021,Charlotte Hornets @ Brooklyn Nets,4,22,24,22,24,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909837,20261021,Chicago Bulls @ Toronto Raptors,1,43,23,43,23,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909837,20261021,Chicago Bulls @ Toronto Raptors,2,26,21,26,21,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909837,20261021,Chicago Bulls @ Toronto Raptors,3,34,27,34,27,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909837,20261021,Chicago Bulls @ Toronto Raptors,4,32,21,32,21,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909838,20261021,Utah Jazz @ Memphis Grizzlies,1,29,31,29,31,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909838,20261021,Utah Jazz @ Memphis Grizzlies,2,35,20,35,20,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909838,20261021,Utah Jazz @ Memphis Grizzlies,3,34,28,34,28,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909838,20261021,Utah Jazz @ Memphis Grizzlies,4,25,24,25,24,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909839,20261021,Indiana Pacers @ New Orleans Pelicans,1,31,38,31,38,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909839,20261021,Indiana Pacers @ New Orleans Pelicans,2,35,18,35,18,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909839,20261021,Indiana Pacers @ New Orleans Pelicans,3,26,30,26,30,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909839,20261021,Indiana Pacers @ New Orleans Pelicans,4,28,37,28,37,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909840,20261021,Dallas Mavericks @ Houston Rockets,1,32,26,32,26,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909840,20261021,Dallas Mavericks @ Houston Rockets,2,38,12,38,12,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909840,20261021,Dallas Mavericks @ Houston Rockets,3,30,38,30,38,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909840,20261021,Dallas Mavericks @ Houston Rockets,4,28,34,28,34,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909092,20261021,Golden State Warriors @ Los Angeles Lakers,1,34,33,34,33,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909092,20261021,Golden State Warriors @ Los Angeles Lakers,2,32,19,32,19,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909092,20261021,Golden State Warriors @ Los Angeles Lakers,3,36,16,36,16,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909092,20261021,Golden State Warriors @ Los Angeles Lakers,4,28,37,25,37,mismatch,ESPN summary linescores,confirmed_team_quarter_linescore,https://www.nba.com/game/gsw-vs-lal-0022600005,NBA_verified_official_linescore,yes
+401909841,20261021,Phoenix Suns @ Portland Trail Blazers,1,43,12,43,12,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909841,20261021,Phoenix Suns @ Portland Trail Blazers,2,29,27,29,27,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909841,20261021,Phoenix Suns @ Portland Trail Blazers,3,35,27,35,27,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909841,20261021,Phoenix Suns @ Portland Trail Blazers,4,17,16,17,17,mismatch,ESPN summary linescores,confirmed_team_quarter_linescore,https://www.nba.com/game/phx-vs-por-0022600092,NBA_verified_official_linescore,yes
+401909842,20261021,Sacramento Kings @ LA Clippers,1,41,29,41,29,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909842,20261021,Sacramento Kings @ LA Clippers,2,20,25,20,25,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909842,20261021,Sacramento Kings @ LA Clippers,3,32,16,32,16,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909842,20261021,Sacramento Kings @ LA Clippers,4,28,26,28,26,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909093,20261022,Cleveland Cavaliers @ Philadelphia 76ers,1,18,35,18,35,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909093,20261022,Cleveland Cavaliers @ Philadelphia 76ers,2,27,34,27,34,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909093,20261022,Cleveland Cavaliers @ Philadelphia 76ers,3,37,21,37,21,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909093,20261022,Cleveland Cavaliers @ Philadelphia 76ers,4,32,16,32,16,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909094,20261022,Denver Nuggets @ Oklahoma City Thunder,1,24,27,24,27,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909094,20261022,Denver Nuggets @ Oklahoma City Thunder,2,20,21,20,21,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909094,20261022,Denver Nuggets @ Oklahoma City Thunder,3,26,16,26,16,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909094,20261022,Denver Nuggets @ Oklahoma City Thunder,4,26,20,26,20,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909848,20261023,Chicago Bulls @ Milwaukee Bucks,1,32,17,32,17,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909848,20261023,Chicago Bulls @ Milwaukee Bucks,2,30,44,30,44,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909848,20261023,Chicago Bulls @ Milwaukee Bucks,3,42,41,42,41,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909848,20261023,Chicago Bulls @ Milwaukee Bucks,4,21,30,21,30,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909095,20261023,New York Knicks @ Boston Celtics,1,26,27,26,27,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909095,20261023,New York Knicks @ Boston Celtics,2,24,22,24,22,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909095,20261023,New York Knicks @ Boston Celtics,3,33,24,33,24,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909095,20261023,New York Knicks @ Boston Celtics,4,24,30,24,30,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909843,20261023,Atlanta Hawks @ Charlotte Hornets,1,20,33,20,33,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909843,20261023,Atlanta Hawks @ Charlotte Hornets,2,23,35,23,35,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909843,20261023,Atlanta Hawks @ Charlotte Hornets,3,19,29,19,29,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909843,20261023,Atlanta Hawks @ Charlotte Hornets,4,19,31,19,31,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909844,20261023,Dallas Mavericks @ Indiana Pacers,1,27,44,27,44,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909844,20261023,Dallas Mavericks @ Indiana Pacers,2,16,33,16,33,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909844,20261023,Dallas Mavericks @ Indiana Pacers,3,33,21,33,21,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909844,20261023,Dallas Mavericks @ Indiana Pacers,4,29,23,29,23,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909845,20261023,Minnesota Timberwolves @ Orlando Magic,1,20,26,20,26,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909845,20261023,Minnesota Timberwolves @ Orlando Magic,2,25,31,25,31,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909845,20261023,Minnesota Timberwolves @ Orlando Magic,3,15,29,15,29,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909845,20261023,Minnesota Timberwolves @ Orlando Magic,4,33,29,33,29,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909846,20261023,Toronto Raptors @ Washington Wizards,1,21,34,21,34,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909846,20261023,Toronto Raptors @ Washington Wizards,2,31,26,31,26,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909846,20261023,Toronto Raptors @ Washington Wizards,3,25,21,25,21,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909846,20261023,Toronto Raptors @ Washington Wizards,4,25,31,25,31,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909847,20261023,Detroit Pistons @ Miami Heat,1,26,41,26,41,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909847,20261023,Detroit Pistons @ Miami Heat,2,27,24,27,24,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909847,20261023,Detroit Pistons @ Miami Heat,3,27,38,27,38,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909847,20261023,Detroit Pistons @ Miami Heat,4,31,25,31,25,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909096,20261023,Houston Rockets @ San Antonio Spurs,1,26,30,27,32,mismatch,ESPN summary linescores,confirmed_team_quarter_linescore,https://www.nba.com/game/hou-vs-sas-0022600009,NBA_verified_official_linescore,yes
+401909096,20261023,Houston Rockets @ San Antonio Spurs,2,33,31,32,29,mismatch,ESPN summary linescores,confirmed_team_quarter_linescore,https://www.nba.com/game/hou-vs-sas-0022600009,NBA_verified_official_linescore,yes
+401909096,20261023,Houston Rockets @ San Antonio Spurs,3,22,24,22,24,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909096,20261023,Houston Rockets @ San Antonio Spurs,4,,,29,29,pbp_unresolved,ESPN summary linescores,confirmed_team_quarter_linescore,https://www.nba.com/game/hou-vs-sas-0022600009,NBA_verified_official_linescore,yes
+401909849,20261023,New Orleans Pelicans @ Utah Jazz,1,31,28,31,28,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909849,20261023,New Orleans Pelicans @ Utah Jazz,2,31,24,31,24,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909849,20261023,New Orleans Pelicans @ Utah Jazz,3,24,38,24,38,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909849,20261023,New Orleans Pelicans @ Utah Jazz,4,34,29,34,29,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909850,20261023,Memphis Grizzlies @ Golden State Warriors,1,34,33,34,33,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909850,20261023,Memphis Grizzlies @ Golden State Warriors,2,22,27,22,27,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909850,20261023,Memphis Grizzlies @ Golden State Warriors,3,34,24,34,24,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909850,20261023,Memphis Grizzlies @ Golden State Warriors,4,18,27,18,27,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909851,20261023,LA Clippers @ Los Angeles Lakers,1,27,31,27,31,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909851,20261023,LA Clippers @ Los Angeles Lakers,2,37,33,37,33,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909851,20261023,LA Clippers @ Los Angeles Lakers,3,39,26,39,26,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909851,20261023,LA Clippers @ Los Angeles Lakers,4,22,27,22,27,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909852,20261023,Portland Trail Blazers @ Sacramento Kings,1,33,27,33,27,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909852,20261023,Portland Trail Blazers @ Sacramento Kings,2,31,32,31,32,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909852,20261023,Portland Trail Blazers @ Sacramento Kings,3,26,44,26,44,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909852,20261023,Portland Trail Blazers @ Sacramento Kings,4,30,25,30,25,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909853,20261024,Miami Heat @ Charlotte Hornets,1,31,31,31,31,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909853,20261024,Miami Heat @ Charlotte Hornets,2,35,27,35,27,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909853,20261024,Miami Heat @ Charlotte Hornets,3,30,17,30,17,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909853,20261024,Miami Heat @ Charlotte Hornets,4,19,35,19,35,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909854,20261024,Brooklyn Nets @ Cleveland Cavaliers,1,35,30,35,30,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909854,20261024,Brooklyn Nets @ Cleveland Cavaliers,2,31,22,33,24,mismatch,ESPN summary linescores,confirmed_team_quarter_linescore,https://www.nba.com/game/cle-vs-bkn-0022600105,NBA_verified_official_linescore,yes
+401909854,20261024,Brooklyn Nets @ Cleveland Cavaliers,3,30,26,28,26,mismatch,ESPN summary linescores,confirmed_team_quarter_linescore,https://www.nba.com/game/cle-vs-bkn-0022600105,NBA_verified_official_linescore,yes
+401909854,20261024,Brooklyn Nets @ Cleveland Cavaliers,4,29,43,29,41,mismatch,ESPN summary linescores,confirmed_team_quarter_linescore,https://www.nba.com/game/cle-vs-bkn-0022600105,NBA_verified_official_linescore,yes
+401909855,20261024,Milwaukee Bucks @ Philadelphia 76ers,1,34,25,34,25,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909855,20261024,Milwaukee Bucks @ Philadelphia 76ers,2,30,35,30,35,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909855,20261024,Milwaukee Bucks @ Philadelphia 76ers,3,33,27,33,27,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909855,20261024,Milwaukee Bucks @ Philadelphia 76ers,4,30,29,30,29,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909857,20261024,Washington Wizards @ Chicago Bulls,1,27,28,27,28,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909857,20261024,Washington Wizards @ Chicago Bulls,2,35,29,35,29,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909857,20261024,Washington Wizards @ Chicago Bulls,3,20,40,20,40,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909857,20261024,Washington Wizards @ Chicago Bulls,4,38,27,38,27,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909858,20261024,San Antonio Spurs @ Dallas Mavericks,1,31,32,31,32,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909858,20261024,San Antonio Spurs @ Dallas Mavericks,2,29,36,29,36,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909858,20261024,San Antonio Spurs @ Dallas Mavericks,3,29,24,29,24,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909858,20261024,San Antonio Spurs @ Dallas Mavericks,4,17,30,17,30,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909856,20261024,Houston Rockets @ Atlanta Hawks,1,26,30,26,30,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909856,20261024,Houston Rockets @ Atlanta Hawks,2,20,29,22,29,mismatch,ESPN summary linescores,confirmed_team_quarter_linescore,https://www.nba.com/game/hou-vs-atl-0022600107,NBA_verified_official_linescore,yes
+401909856,20261024,Houston Rockets @ Atlanta Hawks,3,,,33,33,pbp_unresolved,ESPN summary linescores,confirmed_team_quarter_linescore,https://www.nba.com/game/hou-vs-atl-0022600107,NBA_verified_official_linescore,yes
+401909856,20261024,Houston Rockets @ Atlanta Hawks,4,,,33,29,pbp_unresolved,ESPN summary linescores,confirmed_team_quarter_linescore,https://www.nba.com/game/hou-vs-atl-0022600107,NBA_verified_official_linescore,yes
+401909859,20261024,New Orleans Pelicans @ Denver Nuggets,1,24,38,24,38,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909859,20261024,New Orleans Pelicans @ Denver Nuggets,2,33,35,33,35,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909859,20261024,New Orleans Pelicans @ Denver Nuggets,3,32,35,32,35,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909859,20261024,New Orleans Pelicans @ Denver Nuggets,4,37,18,37,18,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909859,20261024,New Orleans Pelicans @ Denver Nuggets,5,15,9,15,9,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909860,20261024,Golden State Warriors @ Phoenix Suns,1,22,25,22,25,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909860,20261024,Golden State Warriors @ Phoenix Suns,2,35,29,35,29,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909860,20261024,Golden State Warriors @ Phoenix Suns,3,45,38,45,38,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909860,20261024,Golden State Warriors @ Phoenix Suns,4,29,30,29,30,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909861,20261025,Los Angeles Lakers @ Utah Jazz,1,47,29,47,29,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909861,20261025,Los Angeles Lakers @ Utah Jazz,2,24,45,24,45,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909861,20261025,Los Angeles Lakers @ Utah Jazz,3,29,29,29,29,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909861,20261025,Los Angeles Lakers @ Utah Jazz,4,23,29,23,29,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909862,20261025,Indiana Pacers @ Brooklyn Nets,1,26,24,26,24,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909862,20261025,Indiana Pacers @ Brooklyn Nets,2,30,41,30,41,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909862,20261025,Indiana Pacers @ Brooklyn Nets,3,24,37,24,37,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909862,20261025,Indiana Pacers @ Brooklyn Nets,4,29,34,29,34,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909863,20261025,Orlando Magic @ New York Knicks,1,28,21,28,21,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909863,20261025,Orlando Magic @ New York Knicks,2,24,27,24,27,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909863,20261025,Orlando Magic @ New York Knicks,3,23,23,23,23,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909863,20261025,Orlando Magic @ New York Knicks,4,27,40,27,40,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909864,20261025,Toronto Raptors @ Minnesota Timberwolves,1,32,21,32,21,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909864,20261025,Toronto Raptors @ Minnesota Timberwolves,2,23,26,23,26,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909864,20261025,Toronto Raptors @ Minnesota Timberwolves,3,35,15,35,15,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909864,20261025,Toronto Raptors @ Minnesota Timberwolves,4,27,32,27,32,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909865,20261025,LA Clippers @ Oklahoma City Thunder,1,23,20,23,20,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909865,20261025,LA Clippers @ Oklahoma City Thunder,2,20,26,20,26,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909865,20261025,LA Clippers @ Oklahoma City Thunder,3,34,30,34,30,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909865,20261025,LA Clippers @ Oklahoma City Thunder,4,31,25,31,25,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909866,20261025,Detroit Pistons @ Philadelphia 76ers,1,22,34,22,34,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909866,20261025,Detroit Pistons @ Philadelphia 76ers,2,22,22,22,22,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909866,20261025,Detroit Pistons @ Philadelphia 76ers,3,25,23,25,23,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909866,20261025,Detroit Pistons @ Philadelphia 76ers,4,24,27,24,27,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909867,20261025,Memphis Grizzlies @ Sacramento Kings,1,28,25,28,25,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909867,20261025,Memphis Grizzlies @ Sacramento Kings,2,31,42,31,42,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909867,20261025,Memphis Grizzlies @ Sacramento Kings,3,27,29,31,29,mismatch,ESPN summary linescores,confirmed_team_quarter_linescore,https://www.nba.com/game/mem-vs-sac-0022600118,NBA_verified_official_linescore,yes
+401909867,20261025,Memphis Grizzlies @ Sacramento Kings,4,26,27,22,27,mismatch,ESPN summary linescores,confirmed_team_quarter_linescore,https://www.nba.com/game/mem-vs-sac-0022600118,NBA_verified_official_linescore,yes
+401909868,20261026,Washington Wizards @ Charlotte Hornets,1,19,21,19,21,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909868,20261026,Washington Wizards @ Charlotte Hornets,2,35,23,35,23,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909868,20261026,Washington Wizards @ Charlotte Hornets,3,26,24,26,24,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909868,20261026,Washington Wizards @ Charlotte Hornets,4,30,35,30,35,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909869,20261026,Minnesota Timberwolves @ Cleveland Cavaliers,1,24,31,24,31,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909869,20261026,Minnesota Timberwolves @ Cleveland Cavaliers,2,26,29,26,29,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909869,20261026,Minnesota Timberwolves @ Cleveland Cavaliers,3,36,26,36,26,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909869,20261026,Minnesota Timberwolves @ Cleveland Cavaliers,4,27,27,27,27,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909869,20261026,Minnesota Timberwolves @ Cleveland Cavaliers,5,11,12,14,12,mismatch,ESPN summary linescores,confirmed_team_quarter_linescore,https://www.nba.com/game/min-vs-cle-0022600120,NBA_verified_official_linescore,yes
+401909870,20261026,Chicago Bulls @ Boston Celtics,1,33,21,33,21,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909870,20261026,Chicago Bulls @ Boston Celtics,2,33,33,33,33,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909870,20261026,Chicago Bulls @ Boston Celtics,3,39,21,39,21,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909870,20261026,Chicago Bulls @ Boston Celtics,4,29,24,29,24,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909871,20261026,Dallas Mavericks @ Miami Heat,1,27,23,27,23,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909871,20261026,Dallas Mavericks @ Miami Heat,2,25,30,25,30,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909871,20261026,Dallas Mavericks @ Miami Heat,3,35,30,32,30,mismatch,ESPN summary linescores,confirmed_team_quarter_linescore,https://www.nba.com/game/dal-vs-mia-0022600122,NBA_verified_official_linescore,yes
+401909871,20261026,Dallas Mavericks @ Miami Heat,4,25,30,25,30,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909872,20261026,Indiana Pacers @ Milwaukee Bucks,1,31,29,31,29,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909872,20261026,Indiana Pacers @ Milwaukee Bucks,2,19,32,19,32,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909872,20261026,Indiana Pacers @ Milwaukee Bucks,3,32,24,34,24,mismatch,ESPN summary linescores,confirmed_team_quarter_linescore,https://www.nba.com/game/ind-vs-mil-0022600123,NBA_verified_official_linescore,yes
+401909872,20261026,Indiana Pacers @ Milwaukee Bucks,4,28,17,26,17,mismatch,ESPN summary linescores,confirmed_team_quarter_linescore,https://www.nba.com/game/ind-vs-mil-0022600123,NBA_verified_official_linescore,yes
+401909873,20261026,Phoenix Suns @ Oklahoma City Thunder,1,33,27,33,27,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909873,20261026,Phoenix Suns @ Oklahoma City Thunder,2,34,26,34,26,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909873,20261026,Phoenix Suns @ Oklahoma City Thunder,3,34,32,32,32,mismatch,ESPN summary linescores,confirmed_team_quarter_linescore,https://www.nba.com/game/phx-vs-okc-0022600124,NBA_verified_official_linescore,yes
+401909873,20261026,Phoenix Suns @ Oklahoma City Thunder,4,26,29,26,29,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909874,20261026,Atlanta Hawks @ Houston Rockets,1,32,35,32,35,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909874,20261026,Atlanta Hawks @ Houston Rockets,2,31,31,31,31,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909874,20261026,Atlanta Hawks @ Houston Rockets,3,28,19,28,19,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909874,20261026,Atlanta Hawks @ Houston Rockets,4,29,25,29,25,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909875,20261026,Memphis Grizzlies @ Utah Jazz,1,21,30,21,30,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909875,20261026,Memphis Grizzlies @ Utah Jazz,2,31,28,31,28,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909875,20261026,Memphis Grizzlies @ Utah Jazz,3,24,31,24,31,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909875,20261026,Memphis Grizzlies @ Utah Jazz,4,29,21,29,21,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909876,20261026,Golden State Warriors @ Denver Nuggets,1,32,28,32,28,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909876,20261026,Golden State Warriors @ Denver Nuggets,2,24,32,24,32,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909876,20261026,Golden State Warriors @ Denver Nuggets,3,28,40,28,40,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909876,20261026,Golden State Warriors @ Denver Nuggets,4,30,34,30,34,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810723,20260301,San Antonio Spurs @ New York Knicks,1,22,21,22,21,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810723,20260301,San Antonio Spurs @ New York Knicks,2,29,20,29,20,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810723,20260301,San Antonio Spurs @ New York Knicks,3,29,28,29,28,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810723,20260301,San Antonio Spurs @ New York Knicks,4,34,20,34,20,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810724,20260301,Cleveland Cavaliers @ Brooklyn Nets,1,24,29,24,29,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810724,20260301,Cleveland Cavaliers @ Brooklyn Nets,2,28,17,28,17,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810724,20260301,Cleveland Cavaliers @ Brooklyn Nets,3,23,28,23,28,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810724,20260301,Cleveland Cavaliers @ Brooklyn Nets,4,27,32,27,32,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810725,20260301,Milwaukee Bucks @ Chicago Bulls,1,30,32,30,32,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810725,20260301,Milwaukee Bucks @ Chicago Bulls,2,21,34,21,34,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810725,20260301,Milwaukee Bucks @ Chicago Bulls,3,36,23,36,23,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810725,20260301,Milwaukee Bucks @ Chicago Bulls,4,33,8,33,8,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810726,20260301,Minnesota Timberwolves @ Denver Nuggets,1,31,22,31,22,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810726,20260301,Minnesota Timberwolves @ Denver Nuggets,2,19,36,19,36,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810726,20260301,Minnesota Timberwolves @ Denver Nuggets,3,32,32,32,32,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810726,20260301,Minnesota Timberwolves @ Denver Nuggets,4,26,27,26,27,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810727,20260301,Memphis Grizzlies @ Indiana Pacers,1,34,34,34,34,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810727,20260301,Memphis Grizzlies @ Indiana Pacers,2,26,31,26,31,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810727,20260301,Memphis Grizzlies @ Indiana Pacers,3,23,26,23,26,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810727,20260301,Memphis Grizzlies @ Indiana Pacers,4,23,34,23,34,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810728,20260301,Portland Trail Blazers @ Atlanta Hawks,1,44,25,44,25,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810728,20260301,Portland Trail Blazers @ Atlanta Hawks,2,31,33,31,33,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810728,20260301,Portland Trail Blazers @ Atlanta Hawks,3,28,27,28,27,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810728,20260301,Portland Trail Blazers @ Atlanta Hawks,4,32,16,32,16,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810730,20260301,Detroit Pistons @ Orlando Magic,1,26,23,26,23,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810730,20260301,Detroit Pistons @ Orlando Magic,2,31,27,31,27,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810730,20260301,Detroit Pistons @ Orlando Magic,3,18,31,18,31,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810730,20260301,Detroit Pistons @ Orlando Magic,4,17,25,17,25,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810729,20260301,Philadelphia 76ers @ Boston Celtics,1,26,28,26,28,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810729,20260301,Philadelphia 76ers @ Boston Celtics,2,36,22,36,22,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810729,20260301,Philadelphia 76ers @ Boston Celtics,3,27,33,27,33,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810729,20260301,Philadelphia 76ers @ Boston Celtics,4,25,15,25,15,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810731,20260301,Oklahoma City Thunder @ Dallas Mavericks,1,25,36,25,36,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810731,20260301,Oklahoma City Thunder @ Dallas Mavericks,2,24,22,24,22,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810731,20260301,Oklahoma City Thunder @ Dallas Mavericks,3,20,25,20,25,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810731,20260301,Oklahoma City Thunder @ Dallas Mavericks,4,18,17,18,17,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810732,20260301,New Orleans Pelicans @ LA Clippers,1,43,32,43,32,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810732,20260301,New Orleans Pelicans @ LA Clippers,2,33,38,33,38,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810732,20260301,New Orleans Pelicans @ LA Clippers,3,31,24,31,24,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810732,20260301,New Orleans Pelicans @ LA Clippers,4,30,23,30,23,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810733,20260301,Sacramento Kings @ Los Angeles Lakers,1,36,18,36,18,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810733,20260301,Sacramento Kings @ Los Angeles Lakers,2,28,31,28,31,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810733,20260301,Sacramento Kings @ Los Angeles Lakers,3,32,27,32,27,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810733,20260301,Sacramento Kings @ Los Angeles Lakers,4,32,28,32,28,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810734,20260302,Houston Rockets @ Washington Wizards,1,30,26,30,26,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810734,20260302,Houston Rockets @ Washington Wizards,2,21,34,21,34,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810734,20260302,Houston Rockets @ Washington Wizards,3,29,34,29,34,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810734,20260302,Houston Rockets @ Washington Wizards,4,38,29,38,29,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810735,20260302,Boston Celtics @ Milwaukee Bucks,1,20,30,20,30,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810735,20260302,Boston Celtics @ Milwaukee Bucks,2,23,27,23,27,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810735,20260302,Boston Celtics @ Milwaukee Bucks,3,22,26,22,26,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810735,20260302,Boston Celtics @ Milwaukee Bucks,4,16,25,16,25,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810736,20260302,Denver Nuggets @ Utah Jazz,1,34,33,34,33,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810736,20260302,Denver Nuggets @ Utah Jazz,2,33,33,33,33,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810736,20260302,Denver Nuggets @ Utah Jazz,3,26,34,26,34,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810736,20260302,Denver Nuggets @ Utah Jazz,4,32,28,32,28,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810737,20260302,LA Clippers @ Golden State Warriors,1,31,19,31,19,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810737,20260302,LA Clippers @ Golden State Warriors,2,25,23,25,23,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810737,20260302,LA Clippers @ Golden State Warriors,3,23,35,23,35,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810737,20260302,LA Clippers @ Golden State Warriors,4,22,37,22,37,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810738,20260303,Dallas Mavericks @ Charlotte Hornets,1,31,23,31,23,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810738,20260303,Dallas Mavericks @ Charlotte Hornets,2,26,25,26,25,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810738,20260303,Dallas Mavericks @ Charlotte Hornets,3,35,24,35,24,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810738,20260303,Dallas Mavericks @ Charlotte Hornets,4,25,18,25,18,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810739,20260303,Detroit Pistons @ Cleveland Cavaliers,1,25,27,25,27,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810739,20260303,Detroit Pistons @ Cleveland Cavaliers,2,29,21,29,21,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810739,20260303,Detroit Pistons @ Cleveland Cavaliers,3,35,32,35,32,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810739,20260303,Detroit Pistons @ Cleveland Cavaliers,4,24,29,24,29,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810740,20260303,Washington Wizards @ Orlando Magic,1,27,24,27,24,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810740,20260303,Washington Wizards @ Orlando Magic,2,30,30,30,30,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810740,20260303,Washington Wizards @ Orlando Magic,3,40,27,40,27,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810740,20260303,Washington Wizards @ Orlando Magic,4,29,28,29,28,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810741,20260303,Brooklyn Nets @ Miami Heat,1,34,28,34,28,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810741,20260303,Brooklyn Nets @ Miami Heat,2,35,26,35,26,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810741,20260303,Brooklyn Nets @ Miami Heat,3,22,21,22,21,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810741,20260303,Brooklyn Nets @ Miami Heat,4,33,23,33,23,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810742,20260303,New York Knicks @ Toronto Raptors,1,31,32,31,32,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810742,20260303,New York Knicks @ Toronto Raptors,2,27,36,27,36,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810742,20260303,New York Knicks @ Toronto Raptors,3,24,19,24,19,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810742,20260303,New York Knicks @ Toronto Raptors,4,13,24,13,24,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810743,20260303,San Antonio Spurs @ Philadelphia 76ers,1,25,32,25,32,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810743,20260303,San Antonio Spurs @ Philadelphia 76ers,2,28,46,28,46,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810743,20260303,San Antonio Spurs @ Philadelphia 76ers,3,11,35,11,35,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810743,20260303,San Antonio Spurs @ Philadelphia 76ers,4,27,18,27,18,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810744,20260303,Oklahoma City Thunder @ Chicago Bulls,1,22,26,22,26,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810744,20260303,Oklahoma City Thunder @ Chicago Bulls,2,32,29,32,29,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810744,20260303,Oklahoma City Thunder @ Chicago Bulls,3,22,32,22,32,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810744,20260303,Oklahoma City Thunder @ Chicago Bulls,4,32,29,32,29,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810745,20260303,Memphis Grizzlies @ Minnesota Timberwolves,1,23,32,23,32,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810745,20260303,Memphis Grizzlies @ Minnesota Timberwolves,2,34,30,34,30,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810745,20260303,Memphis Grizzlies @ Minnesota Timberwolves,3,32,20,32,20,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810745,20260303,Memphis Grizzlies @ Minnesota Timberwolves,4,28,28,28,28,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810746,20260303,New Orleans Pelicans @ Los Angeles Lakers,1,31,33,31,33,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810746,20260303,New Orleans Pelicans @ Los Angeles Lakers,2,23,18,23,18,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810746,20260303,New Orleans Pelicans @ Los Angeles Lakers,3,22,27,22,27,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810746,20260303,New Orleans Pelicans @ Los Angeles Lakers,4,34,23,34,23,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810747,20260303,Phoenix Suns @ Sacramento Kings,1,30,22,30,22,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810747,20260303,Phoenix Suns @ Sacramento Kings,2,25,37,25,37,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810747,20260303,Phoenix Suns @ Sacramento Kings,3,20,31,20,31,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810747,20260303,Phoenix Suns @ Sacramento Kings,4,28,24,28,24,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810748,20260304,Oklahoma City Thunder @ New York Knicks,1,23,25,23,25,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810748,20260304,Oklahoma City Thunder @ New York Knicks,2,17,25,17,25,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810748,20260304,Oklahoma City Thunder @ New York Knicks,3,40,27,40,27,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810748,20260304,Oklahoma City Thunder @ New York Knicks,4,20,26,20,26,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810749,20260304,Charlotte Hornets @ Boston Celtics,1,23,35,23,35,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810749,20260304,Charlotte Hornets @ Boston Celtics,2,20,29,20,29,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810749,20260304,Charlotte Hornets @ Boston Celtics,3,25,27,25,27,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810749,20260304,Charlotte Hornets @ Boston Celtics,4,21,27,21,27,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810750,20260304,Utah Jazz @ Philadelphia 76ers,1,29,22,29,22,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810750,20260304,Utah Jazz @ Philadelphia 76ers,2,24,26,24,26,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810750,20260304,Utah Jazz @ Philadelphia 76ers,3,29,35,29,35,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810750,20260304,Utah Jazz @ Philadelphia 76ers,4,24,19,24,19,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810751,20260304,Portland Trail Blazers @ Memphis Grizzlies,1,28,32,28,32,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810751,20260304,Portland Trail Blazers @ Memphis Grizzlies,2,31,27,31,27,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810751,20260304,Portland Trail Blazers @ Memphis Grizzlies,3,30,34,30,34,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810751,20260304,Portland Trail Blazers @ Memphis Grizzlies,4,25,29,25,29,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810752,20260304,Atlanta Hawks @ Milwaukee Bucks,1,38,25,38,25,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810752,20260304,Atlanta Hawks @ Milwaukee Bucks,2,33,41,33,41,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810752,20260304,Atlanta Hawks @ Milwaukee Bucks,3,18,32,18,32,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810752,20260304,Atlanta Hawks @ Milwaukee Bucks,4,24,33,24,33,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810753,20260304,Indiana Pacers @ LA Clippers,1,42,25,42,25,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810753,20260304,Indiana Pacers @ LA Clippers,2,21,26,21,26,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810753,20260304,Indiana Pacers @ LA Clippers,3,39,26,39,26,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810753,20260304,Indiana Pacers @ LA Clippers,4,28,30,28,30,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810754,20260305,Dallas Mavericks @ Orlando Magic,1,26,33,26,33,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810754,20260305,Dallas Mavericks @ Orlando Magic,2,34,29,34,29,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810754,20260305,Dallas Mavericks @ Orlando Magic,3,31,26,31,26,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810754,20260305,Dallas Mavericks @ Orlando Magic,4,24,26,24,26,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810755,20260305,Utah Jazz @ Washington Wizards,1,23,37,23,37,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810755,20260305,Utah Jazz @ Washington Wizards,2,26,30,26,30,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810755,20260305,Utah Jazz @ Washington Wizards,3,35,26,35,26,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810755,20260305,Utah Jazz @ Washington Wizards,4,28,29,28,29,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810756,20260305,Brooklyn Nets @ Miami Heat,1,31,26,31,26,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810756,20260305,Brooklyn Nets @ Miami Heat,2,29,30,29,30,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810756,20260305,Brooklyn Nets @ Miami Heat,3,35,27,35,27,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810756,20260305,Brooklyn Nets @ Miami Heat,4,31,27,31,27,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810757,20260305,Golden State Warriors @ Houston Rockets,1,20,30,20,30,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810757,20260305,Golden State Warriors @ Houston Rockets,2,27,21,27,21,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810757,20260305,Golden State Warriors @ Houston Rockets,3,35,30,35,30,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810757,20260305,Golden State Warriors @ Houston Rockets,4,19,20,19,20,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810757,20260305,Golden State Warriors @ Houston Rockets,5,12,14,12,14,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810758,20260305,Toronto Raptors @ Minnesota Timberwolves,1,31,27,31,27,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810758,20260305,Toronto Raptors @ Minnesota Timberwolves,2,24,27,24,27,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810758,20260305,Toronto Raptors @ Minnesota Timberwolves,3,35,22,35,22,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810758,20260305,Toronto Raptors @ Minnesota Timberwolves,4,25,31,25,31,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810759,20260305,Detroit Pistons @ San Antonio Spurs,1,38,23,38,23,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810759,20260305,Detroit Pistons @ San Antonio Spurs,2,33,32,33,32,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810759,20260305,Detroit Pistons @ San Antonio Spurs,3,22,30,22,30,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810759,20260305,Detroit Pistons @ San Antonio Spurs,4,28,21,28,21,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810760,20260305,Chicago Bulls @ Phoenix Suns,1,20,24,20,24,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810760,20260305,Chicago Bulls @ Phoenix Suns,2,30,31,30,31,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810760,20260305,Chicago Bulls @ Phoenix Suns,3,27,28,27,28,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810760,20260305,Chicago Bulls @ Phoenix Suns,4,26,22,26,22,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810761,20260305,Los Angeles Lakers @ Denver Nuggets,1,32,22,32,22,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810761,20260305,Los Angeles Lakers @ Denver Nuggets,2,32,32,32,32,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810761,20260305,Los Angeles Lakers @ Denver Nuggets,3,29,32,29,32,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810761,20260305,Los Angeles Lakers @ Denver Nuggets,4,27,27,27,27,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810762,20260305,New Orleans Pelicans @ Sacramento Kings,1,30,26,30,26,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810762,20260305,New Orleans Pelicans @ Sacramento Kings,2,33,41,33,41,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810762,20260305,New Orleans Pelicans @ Sacramento Kings,3,28,38,28,38,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810762,20260305,New Orleans Pelicans @ Sacramento Kings,4,32,28,32,28,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810763,20260306,Dallas Mavericks @ Boston Celtics,1,21,22,21,22,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810763,20260306,Dallas Mavericks @ Boston Celtics,2,37,31,37,31,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810763,20260306,Dallas Mavericks @ Boston Celtics,3,32,27,32,27,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810763,20260306,Dallas Mavericks @ Boston Celtics,4,30,20,30,20,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810764,20260306,Miami Heat @ Charlotte Hornets,1,27,30,27,30,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810764,20260306,Miami Heat @ Charlotte Hornets,2,34,28,34,28,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810764,20260306,Miami Heat @ Charlotte Hornets,3,40,40,40,40,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810764,20260306,Miami Heat @ Charlotte Hornets,4,19,30,19,30,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810765,20260306,Portland Trail Blazers @ Houston Rockets,1,27,34,27,34,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810765,20260306,Portland Trail Blazers @ Houston Rockets,2,30,22,30,22,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810765,20260306,Portland Trail Blazers @ Houston Rockets,3,20,26,20,26,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810765,20260306,Portland Trail Blazers @ Houston Rockets,4,29,17,29,17,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810766,20260306,New York Knicks @ Denver Nuggets,1,29,27,29,27,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810766,20260306,New York Knicks @ Denver Nuggets,2,23,38,23,38,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810766,20260306,New York Knicks @ Denver Nuggets,3,28,40,28,40,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810766,20260306,New York Knicks @ Denver Nuggets,4,23,37,23,37,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810767,20260306,New Orleans Pelicans @ Phoenix Suns,1,26,29,26,29,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810767,20260306,New Orleans Pelicans @ Phoenix Suns,2,32,23,32,23,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810767,20260306,New Orleans Pelicans @ Phoenix Suns,3,34,29,34,29,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810767,20260306,New Orleans Pelicans @ Phoenix Suns,4,26,35,26,35,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810768,20260306,LA Clippers @ San Antonio Spurs,1,25,32,25,32,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810768,20260306,LA Clippers @ San Antonio Spurs,2,21,34,21,34,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810768,20260306,LA Clippers @ San Antonio Spurs,3,35,26,35,26,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810768,20260306,LA Clippers @ San Antonio Spurs,4,35,20,35,20,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810769,20260306,Indiana Pacers @ Los Angeles Lakers,1,35,27,35,27,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810769,20260306,Indiana Pacers @ Los Angeles Lakers,2,29,24,29,24,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810769,20260306,Indiana Pacers @ Los Angeles Lakers,3,35,29,35,29,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810769,20260306,Indiana Pacers @ Los Angeles Lakers,4,29,37,29,37,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810770,20260307,Orlando Magic @ Minnesota Timberwolves,1,30,27,30,27,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810770,20260307,Orlando Magic @ Minnesota Timberwolves,2,20,33,20,33,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810770,20260307,Orlando Magic @ Minnesota Timberwolves,3,28,30,28,30,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810770,20260307,Orlando Magic @ Minnesota Timberwolves,4,14,29,14,29,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810771,20260307,Brooklyn Nets @ Detroit Pistons,1,32,19,32,19,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810771,20260307,Brooklyn Nets @ Detroit Pistons,2,30,27,30,27,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810771,20260307,Brooklyn Nets @ Detroit Pistons,3,22,27,22,27,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810771,20260307,Brooklyn Nets @ Detroit Pistons,4,21,34,21,34,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810772,20260307,Philadelphia 76ers @ Atlanta Hawks,1,28,38,28,38,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810772,20260307,Philadelphia 76ers @ Atlanta Hawks,2,38,35,38,35,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810772,20260307,Philadelphia 76ers @ Atlanta Hawks,3,31,21,31,21,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810772,20260307,Philadelphia 76ers @ Atlanta Hawks,4,28,22,28,22,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810773,20260307,LA Clippers @ Memphis Grizzlies,1,41,23,41,23,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810773,20260307,LA Clippers @ Memphis Grizzlies,2,18,35,18,35,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810773,20260307,LA Clippers @ Memphis Grizzlies,3,31,31,31,31,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810773,20260307,LA Clippers @ Memphis Grizzlies,4,30,34,30,34,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810774,20260307,Utah Jazz @ Milwaukee Bucks,1,24,13,24,13,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810774,20260307,Utah Jazz @ Milwaukee Bucks,2,27,31,27,31,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810774,20260307,Utah Jazz @ Milwaukee Bucks,3,32,32,32,32,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810774,20260307,Utah Jazz @ Milwaukee Bucks,4,30,23,30,23,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810775,20260307,Golden State Warriors @ Oklahoma City Thunder,1,34,28,34,28,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810775,20260307,Golden State Warriors @ Oklahoma City Thunder,2,33,26,33,26,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810775,20260307,Golden State Warriors @ Oklahoma City Thunder,3,19,29,19,29,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810775,20260307,Golden State Warriors @ Oklahoma City Thunder,4,18,14,18,14,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810672,20260222,Cleveland Cavaliers @ Oklahoma City Thunder,1,40,25,40,25,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810672,20260222,Cleveland Cavaliers @ Oklahoma City Thunder,2,24,30,24,30,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810672,20260222,Cleveland Cavaliers @ Oklahoma City Thunder,3,25,31,25,31,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810672,20260222,Cleveland Cavaliers @ Oklahoma City Thunder,4,32,27,32,27,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810673,20260222,Brooklyn Nets @ Atlanta Hawks,1,32,30,32,30,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810673,20260222,Brooklyn Nets @ Atlanta Hawks,2,28,26,28,26,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810673,20260222,Brooklyn Nets @ Atlanta Hawks,3,29,31,29,31,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810673,20260222,Brooklyn Nets @ Atlanta Hawks,4,26,17,26,17,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810674,20260222,Toronto Raptors @ Milwaukee Bucks,1,27,22,27,22,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810674,20260222,Toronto Raptors @ Milwaukee Bucks,2,24,38,24,38,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810674,20260222,Toronto Raptors @ Milwaukee Bucks,3,22,32,22,32,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810674,20260222,Toronto Raptors @ Milwaukee Bucks,4,21,30,21,30,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810675,20260222,Denver Nuggets @ Golden State Warriors,1,39,27,39,27,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810675,20260222,Denver Nuggets @ Golden State Warriors,2,37,40,37,40,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810675,20260222,Denver Nuggets @ Golden State Warriors,3,19,34,19,34,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810675,20260222,Denver Nuggets @ Golden State Warriors,4,33,16,33,16,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810676,20260222,Dallas Mavericks @ Indiana Pacers,1,33,36,33,36,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810676,20260222,Dallas Mavericks @ Indiana Pacers,2,33,35,33,35,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810676,20260222,Dallas Mavericks @ Indiana Pacers,3,29,32,29,32,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810676,20260222,Dallas Mavericks @ Indiana Pacers,4,35,31,35,31,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810677,20260222,Charlotte Hornets @ Washington Wizards,1,37,38,37,38,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810677,20260222,Charlotte Hornets @ Washington Wizards,2,19,23,19,23,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810677,20260222,Charlotte Hornets @ Washington Wizards,3,28,44,28,44,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810677,20260222,Charlotte Hornets @ Washington Wizards,4,28,24,28,24,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810678,20260222,Boston Celtics @ Los Angeles Lakers,1,28,28,28,28,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810678,20260222,Boston Celtics @ Los Angeles Lakers,2,22,32,22,32,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810678,20260222,Boston Celtics @ Los Angeles Lakers,3,21,24,21,24,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810678,20260222,Boston Celtics @ Los Angeles Lakers,4,18,27,18,27,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810679,20260222,Philadelphia 76ers @ Minnesota Timberwolves,1,26,35,26,35,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810679,20260222,Philadelphia 76ers @ Minnesota Timberwolves,2,32,33,32,33,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810679,20260222,Philadelphia 76ers @ Minnesota Timberwolves,3,20,26,20,26,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810679,20260222,Philadelphia 76ers @ Minnesota Timberwolves,4,30,41,30,41,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810680,20260222,New York Knicks @ Chicago Bulls,1,27,25,27,25,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810680,20260222,New York Knicks @ Chicago Bulls,2,26,27,26,27,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810680,20260222,New York Knicks @ Chicago Bulls,3,25,31,25,31,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810680,20260222,New York Knicks @ Chicago Bulls,4,21,22,21,22,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810681,20260222,Portland Trail Blazers @ Phoenix Suns,1,20,20,20,20,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810681,20260222,Portland Trail Blazers @ Phoenix Suns,2,18,27,20,27,mismatch,ESPN summary linescores,confirmed_team_quarter_linescore,https://www.nba.com/game/por-vs-phx-0022500826,NBA_verified_official_linescore,yes
+401810681,20260222,Portland Trail Blazers @ Phoenix Suns,3,19,24,17,24,mismatch,ESPN summary linescores,confirmed_team_quarter_linescore,https://www.nba.com/game/por-vs-phx-0022500826,NBA_verified_official_linescore,yes
+401810681,20260222,Portland Trail Blazers @ Phoenix Suns,4,20,21,20,21,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810682,20260222,Orlando Magic @ LA Clippers,1,25,29,25,29,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810682,20260222,Orlando Magic @ LA Clippers,2,28,28,28,28,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810682,20260222,Orlando Magic @ LA Clippers,3,36,31,36,31,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810682,20260222,Orlando Magic @ LA Clippers,4,20,23,20,23,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810683,20260223,San Antonio Spurs @ Detroit Pistons,1,27,24,27,24,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810683,20260223,San Antonio Spurs @ Detroit Pistons,2,28,33,28,33,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810683,20260223,San Antonio Spurs @ Detroit Pistons,3,20,26,20,26,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810683,20260223,San Antonio Spurs @ Detroit Pistons,4,28,31,28,31,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810684,20260223,Sacramento Kings @ Memphis Grizzlies,1,25,33,25,33,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810684,20260223,Sacramento Kings @ Memphis Grizzlies,2,36,30,36,30,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810684,20260223,Sacramento Kings @ Memphis Grizzlies,3,28,29,28,29,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810684,20260223,Sacramento Kings @ Memphis Grizzlies,4,25,31,25,31,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810685,20260223,Utah Jazz @ Houston Rockets,1,38,22,38,22,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810685,20260223,Utah Jazz @ Houston Rockets,2,30,25,30,25,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810685,20260223,Utah Jazz @ Houston Rockets,3,32,28,32,28,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810685,20260223,Utah Jazz @ Houston Rockets,4,25,30,25,30,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810686,20260224,Philadelphia 76ers @ Indiana Pacers,1,38,30,38,30,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810686,20260224,Philadelphia 76ers @ Indiana Pacers,2,27,45,27,45,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810686,20260224,Philadelphia 76ers @ Indiana Pacers,3,20,31,20,31,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810686,20260224,Philadelphia 76ers @ Indiana Pacers,4,29,29,29,29,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810687,20260224,Washington Wizards @ Atlanta Hawks,1,35,20,35,20,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810687,20260224,Washington Wizards @ Atlanta Hawks,2,25,23,25,23,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810687,20260224,Washington Wizards @ Atlanta Hawks,3,40,21,40,21,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810687,20260224,Washington Wizards @ Atlanta Hawks,4,19,34,19,34,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810688,20260224,Dallas Mavericks @ Brooklyn Nets,1,29,36,29,36,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810688,20260224,Dallas Mavericks @ Brooklyn Nets,2,35,40,35,40,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810688,20260224,Dallas Mavericks @ Brooklyn Nets,3,27,23,27,23,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810688,20260224,Dallas Mavericks @ Brooklyn Nets,4,23,24,23,24,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810689,20260224,Oklahoma City Thunder @ Toronto Raptors,1,32,25,32,25,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810689,20260224,Oklahoma City Thunder @ Toronto Raptors,2,19,35,19,35,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810689,20260224,Oklahoma City Thunder @ Toronto Raptors,3,29,38,29,38,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810689,20260224,Oklahoma City Thunder @ Toronto Raptors,4,27,18,27,18,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810690,20260224,New York Knicks @ Cleveland Cavaliers,1,35,26,35,26,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810690,20260224,New York Knicks @ Cleveland Cavaliers,2,25,28,25,28,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810690,20260224,New York Knicks @ Cleveland Cavaliers,3,23,11,23,11,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810690,20260224,New York Knicks @ Cleveland Cavaliers,4,26,29,26,29,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810691,20260224,Charlotte Hornets @ Chicago Bulls,1,31,31,31,31,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810691,20260224,Charlotte Hornets @ Chicago Bulls,2,24,25,24,25,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810691,20260224,Charlotte Hornets @ Chicago Bulls,3,16,42,16,42,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810691,20260224,Charlotte Hornets @ Chicago Bulls,4,28,33,28,33,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810692,20260224,Miami Heat @ Milwaukee Bucks,1,30,29,30,29,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810692,20260224,Miami Heat @ Milwaukee Bucks,2,33,29,33,29,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810692,20260224,Miami Heat @ Milwaukee Bucks,3,26,35,26,35,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810692,20260224,Miami Heat @ Milwaukee Bucks,4,39,24,39,24,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810693,20260224,Golden State Warriors @ New Orleans Pelicans,1,31,19,31,19,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810693,20260224,Golden State Warriors @ New Orleans Pelicans,2,15,20,15,20,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810693,20260224,Golden State Warriors @ New Orleans Pelicans,3,31,33,31,33,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810693,20260224,Golden State Warriors @ New Orleans Pelicans,4,36,37,36,37,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810694,20260224,Boston Celtics @ Phoenix Suns,1,26,21,26,21,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810694,20260224,Boston Celtics @ Phoenix Suns,2,20,29,20,29,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810694,20260224,Boston Celtics @ Phoenix Suns,3,11,30,11,30,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810694,20260224,Boston Celtics @ Phoenix Suns,4,24,17,24,17,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810696,20260224,Minnesota Timberwolves @ Portland Trail Blazers,1,27,33,27,33,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810696,20260224,Minnesota Timberwolves @ Portland Trail Blazers,2,32,29,32,29,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810696,20260224,Minnesota Timberwolves @ Portland Trail Blazers,3,35,34,35,34,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810696,20260224,Minnesota Timberwolves @ Portland Trail Blazers,4,27,28,27,28,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810695,20260224,Orlando Magic @ Los Angeles Lakers,1,33,25,33,25,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810695,20260224,Orlando Magic @ Los Angeles Lakers,2,23,28,23,28,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810695,20260224,Orlando Magic @ Los Angeles Lakers,3,24,26,24,26,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810695,20260224,Orlando Magic @ Los Angeles Lakers,4,29,31,29,31,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810697,20260225,Oklahoma City Thunder @ Detroit Pistons,1,22,34,22,34,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810697,20260225,Oklahoma City Thunder @ Detroit Pistons,2,36,18,36,18,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810697,20260225,Oklahoma City Thunder @ Detroit Pistons,3,36,28,36,28,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810697,20260225,Oklahoma City Thunder @ Detroit Pistons,4,30,36,30,36,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810698,20260225,San Antonio Spurs @ Toronto Raptors,1,29,30,29,30,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810698,20260225,San Antonio Spurs @ Toronto Raptors,2,30,27,30,27,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810698,20260225,San Antonio Spurs @ Toronto Raptors,3,31,21,31,21,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810698,20260225,San Antonio Spurs @ Toronto Raptors,4,17,32,17,32,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810699,20260225,Golden State Warriors @ Memphis Grizzlies,1,31,34,31,34,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810699,20260225,Golden State Warriors @ Memphis Grizzlies,2,22,40,22,40,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810699,20260225,Golden State Warriors @ Memphis Grizzlies,3,23,22,23,22,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810699,20260225,Golden State Warriors @ Memphis Grizzlies,4,36,37,36,37,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810700,20260225,Sacramento Kings @ Houston Rockets,1,33,22,33,22,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810700,20260225,Sacramento Kings @ Houston Rockets,2,44,28,44,28,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810700,20260225,Sacramento Kings @ Houston Rockets,3,31,26,31,26,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810700,20260225,Sacramento Kings @ Houston Rockets,4,20,21,20,21,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810701,20260225,Cleveland Cavaliers @ Milwaukee Bucks,1,33,33,33,33,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810701,20260225,Cleveland Cavaliers @ Milwaukee Bucks,2,29,30,29,30,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810701,20260225,Cleveland Cavaliers @ Milwaukee Bucks,3,31,31,31,31,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810701,20260225,Cleveland Cavaliers @ Milwaukee Bucks,4,25,22,25,22,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810702,20260225,Boston Celtics @ Denver Nuggets,1,21,24,21,24,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810702,20260225,Boston Celtics @ Denver Nuggets,2,26,24,26,24,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810702,20260225,Boston Celtics @ Denver Nuggets,3,30,19,30,19,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810702,20260225,Boston Celtics @ Denver Nuggets,4,26,17,26,17,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810703,20260226,Charlotte Hornets @ Indiana Pacers,1,34,31,34,31,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810703,20260226,Charlotte Hornets @ Indiana Pacers,2,12,36,12,36,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810703,20260226,Charlotte Hornets @ Indiana Pacers,3,36,40,36,40,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810703,20260226,Charlotte Hornets @ Indiana Pacers,4,27,26,27,26,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810704,20260226,Miami Heat @ Philadelphia 76ers,1,36,35,36,35,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810704,20260226,Miami Heat @ Philadelphia 76ers,2,37,22,37,22,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810704,20260226,Miami Heat @ Philadelphia 76ers,3,26,34,26,34,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810704,20260226,Miami Heat @ Philadelphia 76ers,4,25,26,25,26,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810705,20260226,Washington Wizards @ Atlanta Hawks,1,37,26,37,26,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810705,20260226,Washington Wizards @ Atlanta Hawks,2,39,30,39,30,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810705,20260226,Washington Wizards @ Atlanta Hawks,3,22,24,22,24,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810705,20260226,Washington Wizards @ Atlanta Hawks,4,28,16,28,16,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810706,20260226,San Antonio Spurs @ Brooklyn Nets,1,22,36,22,36,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810706,20260226,San Antonio Spurs @ Brooklyn Nets,2,34,35,34,35,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810706,20260226,San Antonio Spurs @ Brooklyn Nets,3,28,33,28,33,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810706,20260226,San Antonio Spurs @ Brooklyn Nets,4,26,22,26,22,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810707,20260226,Houston Rockets @ Orlando Magic,1,29,22,29,22,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810707,20260226,Houston Rockets @ Orlando Magic,2,24,21,24,21,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810707,20260226,Houston Rockets @ Orlando Magic,3,27,38,27,38,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810707,20260226,Houston Rockets @ Orlando Magic,4,28,32,28,32,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810708,20260226,Portland Trail Blazers @ Chicago Bulls,1,34,32,34,32,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810708,20260226,Portland Trail Blazers @ Chicago Bulls,2,29,37,29,37,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810708,20260226,Portland Trail Blazers @ Chicago Bulls,3,23,24,23,24,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810708,20260226,Portland Trail Blazers @ Chicago Bulls,4,26,28,26,28,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810709,20260226,Sacramento Kings @ Dallas Mavericks,1,28,42,28,42,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810709,20260226,Sacramento Kings @ Dallas Mavericks,2,28,26,28,26,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810709,20260226,Sacramento Kings @ Dallas Mavericks,3,32,32,32,32,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810709,20260226,Sacramento Kings @ Dallas Mavericks,4,33,30,33,30,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810710,20260226,Los Angeles Lakers @ Phoenix Suns,1,22,27,22,27,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810710,20260226,Los Angeles Lakers @ Phoenix Suns,2,27,22,27,22,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810710,20260226,Los Angeles Lakers @ Phoenix Suns,3,31,31,31,31,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810710,20260226,Los Angeles Lakers @ Phoenix Suns,4,33,30,33,30,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810711,20260226,New Orleans Pelicans @ Utah Jazz,1,38,37,38,37,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810711,20260226,New Orleans Pelicans @ Utah Jazz,2,23,41,23,41,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810711,20260226,New Orleans Pelicans @ Utah Jazz,3,27,25,27,25,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810711,20260226,New Orleans Pelicans @ Utah Jazz,4,30,26,30,26,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810712,20260226,Minnesota Timberwolves @ LA Clippers,1,27,29,27,29,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810712,20260226,Minnesota Timberwolves @ LA Clippers,2,11,15,11,15,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810712,20260226,Minnesota Timberwolves @ LA Clippers,3,30,19,30,19,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810712,20260226,Minnesota Timberwolves @ LA Clippers,4,20,31,20,31,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810713,20260227,Cleveland Cavaliers @ Detroit Pistons,1,27,35,27,35,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810713,20260227,Cleveland Cavaliers @ Detroit Pistons,2,23,19,23,19,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810713,20260227,Cleveland Cavaliers @ Detroit Pistons,3,35,30,35,30,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810713,20260227,Cleveland Cavaliers @ Detroit Pistons,4,29,30,29,30,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810713,20260227,Cleveland Cavaliers @ Detroit Pistons,5,8,5,8,5,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810714,20260227,Brooklyn Nets @ Boston Celtics,1,35,32,35,32,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810714,20260227,Brooklyn Nets @ Boston Celtics,2,31,25,31,25,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810714,20260227,Brooklyn Nets @ Boston Celtics,3,43,26,43,26,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810714,20260227,Brooklyn Nets @ Boston Celtics,4,39,28,39,28,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810715,20260227,New York Knicks @ Milwaukee Bucks,1,30,38,30,38,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810715,20260227,New York Knicks @ Milwaukee Bucks,2,27,39,27,39,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810715,20260227,New York Knicks @ Milwaukee Bucks,3,26,26,26,26,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810715,20260227,New York Knicks @ Milwaukee Bucks,4,15,24,15,24,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810716,20260227,Memphis Grizzlies @ Dallas Mavericks,1,20,34,20,34,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810716,20260227,Memphis Grizzlies @ Dallas Mavericks,2,24,30,24,30,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810716,20260227,Memphis Grizzlies @ Dallas Mavericks,3,26,37,26,37,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810716,20260227,Memphis Grizzlies @ Dallas Mavericks,4,35,23,35,23,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810717,20260227,Denver Nuggets @ Oklahoma City Thunder,1,19,33,19,33,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810717,20260227,Denver Nuggets @ Oklahoma City Thunder,2,31,26,31,26,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810717,20260227,Denver Nuggets @ Oklahoma City Thunder,3,27,24,27,24,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810717,20260227,Denver Nuggets @ Oklahoma City Thunder,4,30,24,30,24,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810717,20260227,Denver Nuggets @ Oklahoma City Thunder,5,20,14,20,14,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810718,20260228,Portland Trail Blazers @ Charlotte Hornets,1,29,17,29,17,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810718,20260228,Portland Trail Blazers @ Charlotte Hornets,2,22,26,22,26,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810718,20260228,Portland Trail Blazers @ Charlotte Hornets,3,23,24,23,24,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810718,20260228,Portland Trail Blazers @ Charlotte Hornets,4,35,26,35,26,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810719,20260228,Houston Rockets @ Miami Heat,1,32,28,32,28,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810719,20260228,Houston Rockets @ Miami Heat,2,19,24,19,24,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810719,20260228,Houston Rockets @ Miami Heat,3,34,31,34,31,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810719,20260228,Houston Rockets @ Miami Heat,4,30,22,30,22,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810720,20260228,Toronto Raptors @ Washington Wizards,1,33,25,33,25,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810720,20260228,Toronto Raptors @ Washington Wizards,2,31,36,31,36,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810720,20260228,Toronto Raptors @ Washington Wizards,3,28,37,28,37,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810720,20260228,Toronto Raptors @ Washington Wizards,4,33,36,33,36,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810721,20260228,Los Angeles Lakers @ Golden State Warriors,1,20,33,20,33,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810721,20260228,Los Angeles Lakers @ Golden State Warriors,2,27,32,27,32,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810721,20260228,Los Angeles Lakers @ Golden State Warriors,3,25,34,25,34,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810721,20260228,Los Angeles Lakers @ Golden State Warriors,4,29,30,29,30,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810722,20260228,New Orleans Pelicans @ Utah Jazz,1,22,27,22,27,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810722,20260228,New Orleans Pelicans @ Utah Jazz,2,18,38,18,38,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810722,20260228,New Orleans Pelicans @ Utah Jazz,3,33,24,33,24,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401810722,20260228,New Orleans Pelicans @ Utah Jazz,4,32,26,32,26,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909938,20261107,Denver Nuggets @ Indiana Pacers,1,19,27,19,27,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909938,20261107,Denver Nuggets @ Indiana Pacers,2,22,37,22,37,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909938,20261107,Denver Nuggets @ Indiana Pacers,3,37,26,37,26,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909938,20261107,Denver Nuggets @ Indiana Pacers,4,24,24,24,24,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909939,20261107,Brooklyn Nets @ Atlanta Hawks,1,27,37,27,37,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909939,20261107,Brooklyn Nets @ Atlanta Hawks,2,39,33,39,33,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909939,20261107,Brooklyn Nets @ Atlanta Hawks,3,22,25,22,25,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909939,20261107,Brooklyn Nets @ Atlanta Hawks,4,36,26,36,26,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909940,20261107,New York Knicks @ Cleveland Cavaliers,1,27,26,27,26,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909940,20261107,New York Knicks @ Cleveland Cavaliers,2,26,37,26,37,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909940,20261107,New York Knicks @ Cleveland Cavaliers,3,17,25,17,25,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909940,20261107,New York Knicks @ Cleveland Cavaliers,4,27,21,27,21,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909941,20261107,Washington Wizards @ Oklahoma City Thunder,1,25,19,25,19,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909941,20261107,Washington Wizards @ Oklahoma City Thunder,2,32,17,32,17,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909941,20261107,Washington Wizards @ Oklahoma City Thunder,3,33,23,33,23,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909941,20261107,Washington Wizards @ Oklahoma City Thunder,4,24,16,24,16,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909942,20261107,Orlando Magic @ Golden State Warriors,1,31,19,31,19,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909942,20261107,Orlando Magic @ Golden State Warriors,2,26,22,26,22,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909942,20261107,Orlando Magic @ Golden State Warriors,3,20,37,20,37,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909942,20261107,Orlando Magic @ Golden State Warriors,4,33,32,33,32,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909942,20261107,Orlando Magic @ Golden State Warriors,5,16,9,16,9,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909943,20261107,Houston Rockets @ Phoenix Suns,1,35,23,35,23,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909943,20261107,Houston Rockets @ Phoenix Suns,2,12,24,12,24,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909943,20261107,Houston Rockets @ Phoenix Suns,3,29,28,29,28,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909943,20261107,Houston Rockets @ Phoenix Suns,4,26,24,26,24,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909944,20261107,San Antonio Spurs @ Portland Trail Blazers,1,20,22,20,22,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909944,20261107,San Antonio Spurs @ Portland Trail Blazers,2,29,42,29,42,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909944,20261107,San Antonio Spurs @ Portland Trail Blazers,3,27,45,27,45,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909944,20261107,San Antonio Spurs @ Portland Trail Blazers,4,27,16,27,16,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909945,20261108,Philadelphia 76ers @ Chicago Bulls,1,33,34,33,34,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909945,20261108,Philadelphia 76ers @ Chicago Bulls,2,28,34,28,34,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909945,20261108,Philadelphia 76ers @ Chicago Bulls,3,32,31,32,31,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909945,20261108,Philadelphia 76ers @ Chicago Bulls,4,28,28,28,28,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909946,20261108,Los Angeles Lakers @ Detroit Pistons,1,14,38,14,38,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909946,20261108,Los Angeles Lakers @ Detroit Pistons,2,34,23,34,23,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909946,20261108,Los Angeles Lakers @ Detroit Pistons,3,33,27,33,27,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909946,20261108,Los Angeles Lakers @ Detroit Pistons,4,35,33,35,33,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909947,20261108,Utah Jazz @ Minnesota Timberwolves,1,28,25,28,25,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909947,20261108,Utah Jazz @ Minnesota Timberwolves,2,29,26,29,26,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909947,20261108,Utah Jazz @ Minnesota Timberwolves,3,33,27,33,27,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909947,20261108,Utah Jazz @ Minnesota Timberwolves,4,25,22,25,22,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909948,20261108,Brooklyn Nets @ Dallas Mavericks,1,33,26,33,26,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909948,20261108,Brooklyn Nets @ Dallas Mavericks,2,33,20,33,20,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909948,20261108,Brooklyn Nets @ Dallas Mavericks,3,34,25,34,25,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909948,20261108,Brooklyn Nets @ Dallas Mavericks,4,30,22,30,22,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909949,20261108,Boston Celtics @ Milwaukee Bucks,1,27,25,27,25,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909949,20261108,Boston Celtics @ Milwaukee Bucks,2,18,33,18,33,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909949,20261108,Boston Celtics @ Milwaukee Bucks,3,29,33,29,33,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909949,20261108,Boston Celtics @ Milwaukee Bucks,4,23,26,23,26,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909950,20261108,New Orleans Pelicans @ LA Clippers,1,28,28,28,28,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909950,20261108,New Orleans Pelicans @ LA Clippers,2,39,32,39,32,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909950,20261108,New Orleans Pelicans @ LA Clippers,3,35,35,35,35,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909950,20261108,New Orleans Pelicans @ LA Clippers,4,37,28,37,28,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909951,20261108,Miami Heat @ Sacramento Kings,1,30,34,30,34,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909951,20261108,Miami Heat @ Sacramento Kings,2,29,34,29,34,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909951,20261108,Miami Heat @ Sacramento Kings,3,22,23,22,23,verified,ESPN summary linescores,pending,,ESPN_verified,yes
+401909951,20261108,Miami Heat @ Sacramento Kings,4,27,23,27,23,verified,ESPN summary linescores,pending,,ESPN_verified,yes
