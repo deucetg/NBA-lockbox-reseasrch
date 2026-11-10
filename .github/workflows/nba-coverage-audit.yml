@@ -1,0 +1,31 @@
+name: NBA Historical Coverage Audit
+
+on:
+  pull_request:
+    paths:
+      - 'nba_coverage_audit.py'
+      - '.github/workflows/nba-coverage-audit.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  coverage-audit:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Run read-only coverage audit
+        run: python nba_coverage_audit.py --db data/nba_lockbox.sqlite --out exports/coverage_audit
+      - name: Upload audit reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: nba-coverage-audit
+          path: exports/coverage_audit/
+          if-no-files-found: warn
