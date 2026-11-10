@@ -1,3 +1,4 @@
+
 name: NBA LOCKBOX Player Quarter Audit
 
 on:
@@ -12,7 +13,7 @@ permissions:
 jobs:
   player-event-audit:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 15
 
     steps:
       - name: Checkout repository
@@ -26,7 +27,7 @@ jobs:
       - name: Audit player attribution
         run: python nba_player_event_audit.py
 
-      - name: Validate audit report
+      - name: Validate player event audit
         run: |
           python - <<'PY'
           import csv
@@ -42,19 +43,13 @@ jobs:
           total = metrics.get("total_events", 0)
 
           assert total > 0, "No events audited"
-
-          categories = (
+          assert sum(metrics.get(k, 0) for k in (
               "events_with_participants",
               "events_without_participants",
               "invalid_json",
-          )
+          )) == total, "Event coverage does not reconcile"
 
-          assert sum(metrics.get(k, 0) for k in categories) == total, (
-              "Event coverage counts do not reconcile"
-          )
-
-          print(f"Audited {total} play-by-play events")
-          print(f"Events with athlete IDs: {metrics.get('events_with_athlete_ids', 0)}")
+          print(f"Play-by-play events audited: {total}")
           PY
 
       - name: Verify player scoring attribution
@@ -66,7 +61,9 @@ jobs:
           import csv
           from pathlib import Path
 
-          path = Path("exports/player_quarters/player_scoring_verification.csv")
+          path = Path(
+              "exports/player_quarters/player_scoring_verification.csv"
+          )
           assert path.is_file(), "Scoring verification report missing"
 
           with path.open(encoding="utf-8", newline="") as f:
@@ -75,10 +72,7 @@ jobs:
           assert rows, "No scoring events found"
 
           keys = [(r["game_id"], r["play_id"]) for r in rows]
-
-          assert len(keys) == len(set(keys)), (
-              "Duplicate scoring event keys"
-          )
+          assert len(keys) == len(set(keys)), "Duplicate scoring keys"
 
           allowed = {
               "player_identity_candidate",
@@ -89,15 +83,10 @@ jobs:
           }
 
           assert all(r["status"] in allowed for r in rows), (
-              "Unexpected attribution status"
+              "Unexpected scoring verification status"
           )
 
-          print(f"Scoring events audited: {len(rows)}")
-
-          for status in sorted(allowed):
-              count = sum(r["status"] == status for r in rows)
-              print(f"{status}: {count}")
-
+          print(f"Scoring events verified for coverage: {len(rows)}")
           PY
 
       - name: Audit ESPN scoring participant roles
@@ -110,12 +99,11 @@ jobs:
           from pathlib import Path
 
           base = Path("exports/player_quarters")
-
           summary = base / "participant_role_summary.csv"
           samples = base / "participant_role_samples.csv"
 
-          assert summary.is_file(), "Participant role summary missing"
-          assert samples.is_file(), "Participant role samples missing"
+          assert summary.is_file(), "Participant summary missing"
+          assert samples.is_file(), "Participant samples missing"
 
           with summary.open(encoding="utf-8", newline="") as f:
               metrics = {
@@ -123,30 +111,140 @@ jobs:
                   for row in csv.DictReader(f)
               }
 
-          assert metrics.get("scoring_events", 0) > 0, (
-              "No scoring events audited"
-          )
-
-          assert metrics.get("participant_entries", 0) > 0, (
-              "No participant entries audited"
-          )
+          assert metrics.get("scoring_events", 0) > 0
+          assert metrics.get("participant_entries", 0) > 0
 
           with samples.open(encoding="utf-8", newline="") as f:
               rows = list(csv.DictReader(f))
 
-          assert rows, "No multi-participant samples exported"
-
+          assert rows, "No participant samples"
           assert all(
-              int(row["participant_count"]) > 1
-              for row in rows
-          ), "Non-multi-participant event found"
+              int(r["participant_count"]) > 1 for r in rows
+          ), "Unexpected single-participant sample"
 
-          print(f"Scoring events: {metrics['scoring_events']}")
-          print(f"Participant entries: {metrics['participant_entries']}")
-          print(f"Diagnostic sample rows: {len(rows)}")
+          print("Participant role reports validated")
+          PY
+
+      - name: Identify scoring players
+        run: python nba_player_scorer_identification.py
+
+      - name: Validate scorer identification and coverage
+        run: |
+          python - <<'PY'
+          import csv
+          from collections import Counter
+          from pathlib import Path
+
+          base = Path("exports/player_quarters")
+          source = base / "player_scoring_verification.csv"
+          target = base / "scorer_identification_audit.csv"
+
+          assert source.is_file(), "Original scoring audit missing"
+          assert target.is_file(), "Scorer identification audit missing"
+
+          with source.open(encoding="utf-8", newline="") as f:
+              original = list(csv.DictReader(f))
+
+          with target.open(encoding="utf-8", newline="") as f:
+              identified = list(csv.DictReader(f))
+
+          assert original, "No original scoring events"
+          assert identified, "No identified scoring events"
+
+          required = {
+              "game_id", "play_id", "period", "description",
+              "reported_points", "participant_count",
+              "first_participant_id", "scorer_id",
+              "scorer_name", "team_id", "status",
+          }
+
+          assert required.issubset(identified[0]), (
+              "Scorer identification report missing columns"
+          )
+
+          def keys(rows):
+              return [
+                  (r["game_id"], r["play_id"])
+                  for r in rows
+              ]
+
+          original_keys = keys(original)
+          identified_keys = keys(identified)
+
+          assert len(original_keys) == len(set(original_keys)), (
+              "Original scoring report has duplicate keys"
+          )
+          assert len(identified_keys) == len(set(identified_keys)), (
+              "Scorer identification report has duplicate keys"
+          )
+          assert set(original_keys) == set(identified_keys), (
+              "Scoring event coverage differs between reports"
+          )
+
+          allowed = {
+              "description_verified_first_participant",
+              "description_verified_other_participant",
+              "missing_participant_id",
+              "duplicate_participant_id",
+              "unsupported_description",
+              "no_exact_name_match",
+              "multiple_name_matches",
+              "invalid_reported_points",
+          }
+
+          assert all(r["status"] in allowed for r in identified), (
+              "Unexpected scorer identification status"
+          )
+
+          verified = {
+              "description_verified_first_participant",
+              "description_verified_other_participant",
+          }
+
+          for row in identified:
+              status = row["status"]
+              if status in verified:
+                  assert row["scorer_id"], (
+                      "Identified scorer missing athlete ID"
+                  )
+                  assert row["scorer_name"], (
+                      "Identified scorer missing name"
+                  )
+                  assert row["team_id"], (
+                      "Identified scorer missing team ID"
+                  )
+                  assert row["reported_points"] in {"1", "2", "3"}
+                  assert row["scorer_id"] in {
+                      row["first_participant_id"],
+                      row["scorer_id"],
+                  }
+                  if status == "description_verified_first_participant":
+                      assert row["scorer_id"] == row["first_participant_id"]
+                  else:
+                      assert row["scorer_id"] != row["first_participant_id"]
+              else:
+                  assert not row["scorer_id"], (
+                      "Unresolved event incorrectly assigned a scorer"
+                  )
+
+          counts = Counter(r["status"] for r in identified)
+
+          print(f"Total scoring events: {len(identified)}")
+          print(f"Scorer candidates: {sum(counts[s] for s in verified)}")
+          print(
+              "Unresolved events: "
+              f"{sum(n for s, n in counts.items() if s not in verified)}"
+          )
+
+          for status, count in sorted(counts.items()):
+              print(f"{status}: {count}")
+
+          print("Scorer audit passed coverage and integrity checks")
+          print("Player quarter totals are NOT yet certified")
           PY
 
       - name: Upload player research reports
+        if: always()
         uses: actions/upload-artifact@v4
         with:
           name: nba-player-quarter-research
@@ -155,5 +253,6 @@ jobs:
             exports/player_quarters/player_scoring_verification.csv
             exports/player_quarters/participant_role_summary.csv
             exports/player_quarters/participant_role_samples.csv
+            exports/player_quarters/scorer_identification_audit.csv
           if-no-files-found: error
           retention-days: 30
