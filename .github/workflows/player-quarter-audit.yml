@@ -287,16 +287,36 @@ jobs:
           PY
 
     
-      - name: Collect official NBA schedule and map game identities
+     
+      - name: Collect NBA schedule with validated fallback
         shell: bash
+        env:
+          FALLBACK_SOURCE_URL: ${{ vars.NBA_SCHEDULE_FALLBACK_SOURCE_URL }}
         run: |
           set -euo pipefail
+
+          SCHEDULE="exports/player_quarters/nba_official_schedule.csv"
+          FALLBACK="data/nba_schedule_fallback.csv"
+          VALIDATED="exports/player_quarters/nba_validated_schedule.csv"
+
           if python nba_schedule_collector.py; then
-            echo "NBA.com schedule retrieved; matching exact date and home/away teams."
-            python nba_game_identity_mapper.py --nba-schedule exports/player_quarters/nba_official_schedule.csv
+            echo "Official NBA.com schedule collected."
+            python nba_game_identity_mapper.py --nba-schedule "$SCHEDULE"
+
+          elif [[ -f "$FALLBACK" && -n "$FALLBACK_SOURCE_URL" ]]; then
+            echo "::warning::NBA.com unavailable; validating documented fallback."
+
+            python nba_schedule_fallback.py \
+              --input "$FALLBACK" \
+              --source-url "$FALLBACK_SOURCE_URL" \
+              --out "$VALIDATED"
+
+            python nba_game_identity_mapper.py \
+              --nba-schedule "$VALIDATED"
+
           else
-            echo "::warning::NBA.com schedule unavailable. All games remain unverified by NBA.com."
-            rm -f exports/player_quarters/nba_official_schedule.csv
+            echo "::warning::No usable schedule source. NBA game IDs remain unresolved."
+            rm -f "$SCHEDULE" "$VALIDATED"
             python nba_game_identity_mapper.py
           fi
  
