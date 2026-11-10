@@ -1,0 +1,79 @@
+
+name: NBA LOCKBOX Quarter Research
+
+on:
+  workflow_dispatch:
+  pull_request:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+jobs:
+  quarter-test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Verify research database
+        run: |
+          python - <<'PY'
+          import sqlite3
+
+          with sqlite3.connect("data/nba_lockbox.sqlite") as db:
+              games = db.execute(
+                  "SELECT COUNT(*) FROM games"
+              ).fetchone()[0]
+              events = db.execute(
+                  "SELECT COUNT(*) FROM pbp_events"
+              ).fetchone()[0]
+
+          assert games > 0, "No games found"
+          assert events > 0, "No play-by-play found"
+
+          print(f"Games: {games}")
+          print(f"Play-by-play events: {events}")
+          PY
+
+      - name: Generate quarter research
+        run: python nba_quarter_research.py
+
+      - name: Validate quarter exports
+        run: |
+          python - <<'PY'
+          import csv
+          from pathlib import Path
+
+          directory = Path("exports/quarters")
+
+          for filename in (
+              "quarter_team_summary.csv",
+              "quarter_score_events.csv",
+          ):
+              path = directory / filename
+              assert path.exists(), f"Missing {filename}"
+
+              with path.open(encoding="utf-8") as file:
+                  rows = list(csv.DictReader(file))
+
+              assert rows, f"Empty {filename}"
+              print(f"{filename}: {len(rows)} rows")
+
+          PY
+
+      - name: Upload quarter research
+        uses: actions/upload-artifact@v4
+        with:
+          name: nba-quarter-research
+          path: exports/quarters/
+          if-no-files-found: error
+          retention-days: 30
