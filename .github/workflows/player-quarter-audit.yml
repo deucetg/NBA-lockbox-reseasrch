@@ -286,8 +286,20 @@ jobs:
           )
           PY
 
-      - name: Map ESPN game identities
-        run: python nba_game_identity_mapper.py
+    
+      - name: Collect official NBA schedule and map game identities
+        shell: bash
+        run: |
+          set -euo pipefail
+          if python nba_schedule_collector.py; then
+            echo "NBA.com schedule retrieved; matching exact date and home/away teams."
+            python nba_game_identity_mapper.py --nba-schedule exports/player_quarters/nba_official_schedule.csv
+          else
+            echo "::warning::NBA.com schedule unavailable. All games remain unverified by NBA.com."
+            rm -f exports/player_quarters/nba_official_schedule.csv
+            python nba_game_identity_mapper.py
+          fi
+ 
 
       - name: Validate game identity report
         run: |
@@ -317,6 +329,7 @@ jobs:
           name: nba-player-quarter-research
           path: |
             exports/player_quarters/game_identity_map.csv
+            exports/player_quarters/nba_official_schedule.csv 
             exports/player_quarters/player_event_audit.csv
             exports/player_quarters/player_scoring_verification.csv
             exports/player_quarters/participant_role_summary.csv
