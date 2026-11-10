@@ -89,7 +89,7 @@ jobs:
           assert rows, "Verification report empty"
           print(f"Official verification rows: {len(rows)}")
           PY
-
+      - name: Upload quarter research
         uses: actions/upload-artifact@v4
         with:
           name: nba-quarter-research
