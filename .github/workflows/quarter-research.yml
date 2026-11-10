@@ -89,6 +89,25 @@ jobs:
           assert rows, "Verification report empty"
           print(f"Official verification rows: {len(rows)}")
           PY
+      - name: Apply verified quarter reconciliation
+        run: python nba_quarter_reconcile.py
+
+      - name: Validate reconciled quarter export
+        run: |
+          python - <<'PY'
+          import csv
+          from pathlib import Path
+
+          path = Path('exports/quarters/quarter_team_verified.csv')
+          assert path.exists(), 'Verified quarter export missing'
+          with path.open(encoding='utf-8') as file:
+              rows = list(csv.DictReader(file))
+          assert len(rows) >= 1011, f'Unexpected quarter count: {len(rows)}'
+          verified = sum(r['status'] == 'verified_official_quarter_score' for r in rows)
+          assert verified == 1011, f'Expected 1011 reconciled records, got {verified}'
+          print(f'Validated {verified} reconciled quarter records')
+          PY
+
       - name: Upload quarter research
         uses: actions/upload-artifact@v4
         with:
