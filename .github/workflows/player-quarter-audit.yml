@@ -40,6 +40,7 @@ jobs:
 
           metrics = {r["metric"]: int(r["count"]) for r in rows}
           total = metrics.get("total_events", 0)
+
           assert total > 0, "No events audited"
 
           categories = (
@@ -47,6 +48,7 @@ jobs:
               "events_without_participants",
               "invalid_json",
           )
+
           assert sum(metrics.get(k, 0) for k in categories) == total, (
               "Event coverage counts do not reconcile"
           )
@@ -73,6 +75,7 @@ jobs:
           assert rows, "No scoring events found"
 
           keys = [(r["game_id"], r["play_id"]) for r in rows]
+
           assert len(keys) == len(set(keys)), (
               "Duplicate scoring event keys"
           )
@@ -97,6 +100,52 @@ jobs:
 
           PY
 
+      - name: Audit ESPN scoring participant roles
+        run: python nba_player_role_audit.py
+
+      - name: Validate participant role reports
+        run: |
+          python - <<'PY'
+          import csv
+          from pathlib import Path
+
+          base = Path("exports/player_quarters")
+
+          summary = base / "participant_role_summary.csv"
+          samples = base / "participant_role_samples.csv"
+
+          assert summary.is_file(), "Participant role summary missing"
+          assert samples.is_file(), "Participant role samples missing"
+
+          with summary.open(encoding="utf-8", newline="") as f:
+              metrics = {
+                  row["metric"]: int(row["count"])
+                  for row in csv.DictReader(f)
+              }
+
+          assert metrics.get("scoring_events", 0) > 0, (
+              "No scoring events audited"
+          )
+
+          assert metrics.get("participant_entries", 0) > 0, (
+              "No participant entries audited"
+          )
+
+          with samples.open(encoding="utf-8", newline="") as f:
+              rows = list(csv.DictReader(f))
+
+          assert rows, "No multi-participant samples exported"
+
+          assert all(
+              int(row["participant_count"]) > 1
+              for row in rows
+          ), "Non-multi-participant event found"
+
+          print(f"Scoring events: {metrics['scoring_events']}")
+          print(f"Participant entries: {metrics['participant_entries']}")
+          print(f"Diagnostic sample rows: {len(rows)}")
+          PY
+
       - name: Upload player research reports
         uses: actions/upload-artifact@v4
         with:
@@ -104,5 +153,7 @@ jobs:
           path: |
             exports/player_quarters/player_event_audit.csv
             exports/player_quarters/player_scoring_verification.csv
+            exports/player_quarters/participant_role_summary.csv
+            exports/player_quarters/participant_role_samples.csv
           if-no-files-found: error
           retention-days: 30
