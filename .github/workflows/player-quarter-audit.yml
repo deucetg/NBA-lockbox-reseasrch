@@ -1,1 +1,64 @@
-{yaml}
+name: NBA LOCKBOX Player Quarter Audit
+
+on:
+  workflow_dispatch:
+  pull_request:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+jobs:
+  player-event-audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Audit player attribution
+        run: python nba_player_event_audit.py
+
+      - name: Validate audit report
+        run: |
+          python - <<'PY'
+          import csv
+          from pathlib import Path
+
+          path = Path("exports/player_quarters/player_event_audit.csv")
+          assert path.is_file(), "Player audit report missing"
+
+          with path.open(encoding="utf-8", newline="") as f:
+              rows = list(csv.DictReader(f))
+
+          metrics = {r["metric"]: int(r["count"]) for r in rows}
+          total = metrics.get("total_events", 0)
+          assert total > 0, "No events audited"
+
+          categories = (
+              "events_with_participants",
+              "events_without_participants",
+              "invalid_json",
+          )
+          assert sum(metrics.get(k, 0) for k in categories) == total, (
+              "Event coverage counts do not reconcile"
+          )
+
+          print(f"Audited {total} play-by-play events")
+          print(f"Events with athlete IDs: {metrics.get('events_with_athlete_ids', 0)}")
+          PY
+
+      - name: Upload player audit
+        uses: actions/upload-artifact@v4
+        with:
+          name: nba-player-quarter-audit
+          path: exports/player_quarters/player_event_audit.csv
+          if-no-files-found: error
+          retention-days: 30
