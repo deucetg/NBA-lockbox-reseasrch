@@ -55,10 +55,54 @@ jobs:
           print(f"Events with athlete IDs: {metrics.get('events_with_athlete_ids', 0)}")
           PY
 
-      - name: Upload player audit
+      - name: Verify player scoring attribution
+        run: python nba_player_scoring_verify.py
+
+      - name: Validate scoring verification report
+        run: |
+          python - <<'PY'
+          import csv
+          from pathlib import Path
+
+          path = Path("exports/player_quarters/player_scoring_verification.csv")
+          assert path.is_file(), "Scoring verification report missing"
+
+          with path.open(encoding="utf-8", newline="") as f:
+              rows = list(csv.DictReader(f))
+
+          assert rows, "No scoring events found"
+
+          keys = [(r["game_id"], r["play_id"]) for r in rows]
+          assert len(keys) == len(set(keys)), (
+              "Duplicate scoring event keys"
+          )
+
+          allowed = {
+              "player_identity_candidate",
+              "invalid_reported_points",
+              "missing_player_id",
+              "player_not_in_boxscore",
+              "ambiguous_participants",
+          }
+
+          assert all(r["status"] in allowed for r in rows), (
+              "Unexpected attribution status"
+          )
+
+          print(f"Scoring events audited: {len(rows)}")
+
+          for status in sorted(allowed):
+              count = sum(r["status"] == status for r in rows)
+              print(f"{status}: {count}")
+
+          PY
+
+      - name: Upload player research reports
         uses: actions/upload-artifact@v4
         with:
-          name: nba-player-quarter-audit
-          path: exports/player_quarters/player_event_audit.csv
+          name: nba-player-quarter-research
+          path: |
+            exports/player_quarters/player_event_audit.csv
+            exports/player_quarters/player_scoring_verification.csv
           if-no-files-found: error
           retention-days: 30
