@@ -1,0 +1,361 @@
+
+name: NBA LOCKBOX Player Quarter Audit
+
+on:
+  workflow_dispatch:
+  pull_request:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+jobs:
+  player-event-audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Audit player attribution
+        run: python nba_player_event_audit.py
+
+      - name: Validate player event audit
+        run: |
+          python - <<'PY'
+          import csv
+          from pathlib import Path
+
+          path = Path("exports/player_quarters/player_event_audit.csv")
+          assert path.is_file(), "Player audit report missing"
+
+          with path.open(encoding="utf-8", newline="") as f:
+              rows = list(csv.DictReader(f))
+
+          metrics = {r["metric"]: int(r["count"]) for r in rows}
+          total = metrics.get("total_events", 0)
+
+          assert total > 0, "No events audited"
+          assert sum(metrics.get(k, 0) for k in (
+              "events_with_participants",
+              "events_without_participants",
+              "invalid_json",
+          )) == total, "Event coverage does not reconcile"
+
+          print(f"Play-by-play events audited: {total}")
+          PY
+
+      - name: Verify player scoring attribution
+        run: python nba_player_scoring_verify.py
+
+      - name: Validate scoring verification report
+        run: |
+          python - <<'PY'
+          import csv
+          from pathlib import Path
+
+          path = Path(
+              "exports/player_quarters/player_scoring_verification.csv"
+          )
+          assert path.is_file(), "Scoring verification report missing"
+
+          with path.open(encoding="utf-8", newline="") as f:
+              rows = list(csv.DictReader(f))
+
+          assert rows, "No scoring events found"
+
+          keys = [(r["game_id"], r["play_id"]) for r in rows]
+          assert len(keys) == len(set(keys)), "Duplicate scoring keys"
+
+          allowed = {
+              "player_identity_candidate",
+              "invalid_reported_points",
+              "missing_player_id",
+              "player_not_in_boxscore",
+              "ambiguous_participants",
+          }
+
+          assert all(r["status"] in allowed for r in rows), (
+              "Unexpected scoring verification status"
+          )
+
+          print(f"Scoring events verified for coverage: {len(rows)}")
+          PY
+
+      - name: Audit ESPN scoring participant roles
+        run: python nba_player_role_audit.py
+
+      - name: Validate participant role reports
+        run: |
+          python - <<'PY'
+          import csv
+          from pathlib import Path
+
+          base = Path("exports/player_quarters")
+          summary = base / "participant_role_summary.csv"
+          samples = base / "participant_role_samples.csv"
+
+          assert summary.is_file(), "Participant summary missing"
+          assert samples.is_file(), "Participant samples missing"
+
+          with summary.open(encoding="utf-8", newline="") as f:
+              metrics = {
+                  row["metric"]: int(row["count"])
+                  for row in csv.DictReader(f)
+              }
+
+          assert metrics.get("scoring_events", 0) > 0
+          assert metrics.get("participant_entries", 0) > 0
+
+          with samples.open(encoding="utf-8", newline="") as f:
+              rows = list(csv.DictReader(f))
+
+          assert rows, "No participant samples"
+          assert all(
+              int(r["participant_count"]) > 1 for r in rows
+          ), "Unexpected single-participant sample"
+
+          print("Participant role reports validated")
+          PY
+
+      - name: Identify scoring players
+        run: python nba_player_scorer_identification.py
+
+      - name: Validate scorer identification and coverage
+        run: |
+          python - <<'PY'
+          import csv
+          from collections import Counter
+          from pathlib import Path
+
+          base = Path("exports/player_quarters")
+          source = base / "player_scoring_verification.csv"
+          target = base / "scorer_identification_audit.csv"
+
+          assert source.is_file(), "Original scoring audit missing"
+          assert target.is_file(), "Scorer identification audit missing"
+
+          with source.open(encoding="utf-8", newline="") as f:
+              original = list(csv.DictReader(f))
+
+          with target.open(encoding="utf-8", newline="") as f:
+              identified = list(csv.DictReader(f))
+
+          assert original, "No original scoring events"
+          assert identified, "No identified scoring events"
+
+          required = {
+              "game_id", "play_id", "period", "description",
+              "reported_points", "participant_count",
+              "first_participant_id", "scorer_id",
+              "scorer_name", "team_id", "status",
+          }
+
+          assert required.issubset(identified[0]), (
+              "Scorer identification report missing columns"
+          )
+
+          def keys(rows):
+              return [
+                  (r["game_id"], r["play_id"])
+                  for r in rows
+              ]
+
+          original_keys = keys(original)
+          identified_keys = keys(identified)
+
+          assert len(original_keys) == len(set(original_keys)), (
+              "Original scoring report has duplicate keys"
+          )
+          assert len(identified_keys) == len(set(identified_keys)), (
+              "Scorer identification report has duplicate keys"
+          )
+          assert set(original_keys) == set(identified_keys), (
+              "Scoring event coverage differs between reports"
+          )
+
+          allowed = {
+              "description_verified_first_participant",
+              "description_verified_other_participant",
+              "missing_participant_id",
+              "duplicate_participant_id",
+              "unsupported_description",
+              "no_exact_name_match",
+              "multiple_name_matches",
+              "invalid_reported_points",
+          }
+
+          assert all(r["status"] in allowed for r in identified), (
+              "Unexpected scorer identification status"
+          )
+
+          verified = {
+              "description_verified_first_participant",
+              "description_verified_other_participant",
+          }
+
+          for row in identified:
+              status = row["status"]
+              if status in verified:
+                  assert row["scorer_id"], (
+                      "Identified scorer missing athlete ID"
+                  )
+                  assert row["scorer_name"], (
+                      "Identified scorer missing name"
+                  )
+                  assert row["team_id"], (
+                      "Identified scorer missing team ID"
+                  )
+                  assert row["reported_points"] in {"1", "2", "3"}
+                  if status == "description_verified_first_participant":
+                      assert row["scorer_id"] == row["first_participant_id"]
+                  else:
+                      assert row["scorer_id"] != row["first_participant_id"]
+              else:
+                  assert not row["scorer_id"], (
+                      "Unresolved event incorrectly assigned a scorer"
+                  )
+
+          counts = Counter(r["status"] for r in identified)
+
+          print(f"Total scoring events: {len(identified)}")
+          print(f"Scorer candidates: {sum(counts[s] for s in verified)}")
+          print(
+              "Unresolved events: "
+              f"{sum(n for s, n in counts.items() if s not in verified)}"
+          )
+
+          for status, count in sorted(counts.items()):
+              print(f"{status}: {count}")
+
+          print("Scorer audit passed coverage and integrity checks")
+          print("Player quarter totals are NOT yet certified")
+          PY
+
+      - name: Reconcile player quarter scoring
+        run: python nba_player_quarter_reconcile.py
+
+      - name: Validate player quarter reconciliation
+        run: |
+          python - <<'PY'
+          import csv
+          from pathlib import Path
+
+          base = Path("exports/player_quarters")
+          totals = base / "player_quarter_reconciliation.csv"
+          unresolved = base / "player_quarter_unresolved_events.csv"
+
+          assert totals.is_file(), "Player quarter totals missing"
+          assert unresolved.is_file(), "Unresolved events report missing"
+
+          with totals.open(newline="", encoding="utf-8") as f:
+              rows = list(csv.DictReader(f))
+          with unresolved.open(newline="", encoding="utf-8") as f:
+              exceptions = list(csv.DictReader(f))
+
+          assert rows, "No player-game rows"
+          assert len(rows) == len({
+              (r["game_id"], r["player_id"]) for r in rows
+          }), "Duplicate player-game rows"
+
+          for row in rows:
+              quarter_sum = sum(int(row[q]) for q in (
+                  "q1", "q2", "q3", "q4", "ot_points"
+              ))
+              assert quarter_sum == int(row["pbp_total"]), (
+                  "Quarter points do not sum to PBP total"
+              )
+              assert int(row["pbp_total"]) - int(
+                  row["boxscore_pts"]
+              ) == int(row["difference"]), (
+                  "Incorrect box-score difference"
+              )
+
+          print(f"Player-game records: {len(rows)}")
+          print(f"Unresolved scoring events: {len(exceptions)}")
+          print(
+              "Reconciliation output validated; "
+              "discrepancies remain provisional."
+          )
+          PY
+
+    
+     
+      - name: Collect NBA schedule with validated fallback
+        shell: bash
+        env:
+          FALLBACK_SOURCE_URL: ${{ vars.NBA_SCHEDULE_FALLBACK_SOURCE_URL }}
+        run: |
+          set -euo pipefail
+
+          SCHEDULE="exports/player_quarters/nba_official_schedule.csv"
+          FALLBACK="data/nba_schedule_fallback.csv"
+          VALIDATED="exports/player_quarters/nba_validated_schedule.csv"
+
+          if python nba_schedule_collector.py; then
+            echo "Official NBA.com schedule collected."
+            python nba_game_identity_mapper.py --nba-schedule "$SCHEDULE"
+
+          elif [[ -f "$FALLBACK" && -n "$FALLBACK_SOURCE_URL" ]]; then
+            echo "::warning::NBA.com unavailable; validating documented fallback."
+
+            python nba_schedule_fallback.py \
+              --input "$FALLBACK" \
+              --source-url "$FALLBACK_SOURCE_URL" \
+              --out "$VALIDATED"
+
+            python nba_game_identity_mapper.py \
+              --nba-schedule "$VALIDATED"
+
+          else
+            echo "::warning::No usable schedule source. NBA game IDs remain unresolved."
+            rm -f "$SCHEDULE" "$VALIDATED"
+            python nba_game_identity_mapper.py
+          fi
+ 
+
+      - name: Validate game identity report
+        run: |
+          python - <<'PY'
+          import csv
+          from pathlib import Path
+
+          path = Path("exports/player_quarters/game_identity_map.csv")
+          assert path.is_file(), "Game identity report missing"
+
+          with path.open(newline="", encoding="utf-8") as f:
+              rows = list(csv.DictReader(f))
+
+          assert rows, "No games found"
+          ids = [r["espn_game_id"] for r in rows]
+          assert len(ids) == len(set(ids)), "Duplicate ESPN game IDs"
+          assert all(r["game_date"] for r in rows), "Missing game dates"
+
+          print(f"Game identities recorded: {len(rows)}")
+          PY
+
+
+      - name: Upload player research reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: nba-player-quarter-research
+          path: |
+            exports/player_quarters/game_identity_map.csv
+            exports/player_quarters/nba_official_schedule.csv 
+            exports/player_quarters/player_event_audit.csv
+            exports/player_quarters/player_scoring_verification.csv
+            exports/player_quarters/participant_role_summary.csv
+            exports/player_quarters/participant_role_samples.csv
+            exports/player_quarters/scorer_identification_audit.csv
+            exports/player_quarters/player_quarter_reconciliation.csv
+            exports/player_quarters/player_quarter_unresolved_events.csv
+          if-no-files-found: error
+          retention-days: 30
