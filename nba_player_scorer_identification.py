@@ -23,6 +23,10 @@ def normalize(value):
     value = unicodedata.normalize("NFKD", str(value or ""))
     value = "".join(ch for ch in value if not unicodedata.combining(ch))
     value = value.casefold().replace("’", "'")
+    # ESPN descriptions can write dotted initials ("L.J. Cryer") while
+    # box scores write the same initials without dots ("LJ Cryer").
+    # Remove dots immediately following single-letter initials ONLY.
+    value = re.sub(r"\b([a-z])\.", r"\1", value)
     return re.sub(r"[^a-z0-9]+", " ", value).strip()
 
 
