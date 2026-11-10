@@ -108,6 +108,9 @@ jobs:
           print(f'Validated {verified} reconciled quarter records')
           PY
 
+      - name: Automatically verify new quarter records
+        run: python nba_quarter_auto_verify.py
+  
       - name: Upload quarter research
         uses: actions/upload-artifact@v4
         with:
