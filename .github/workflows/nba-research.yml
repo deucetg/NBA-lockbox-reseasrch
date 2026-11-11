@@ -38,7 +38,8 @@ jobs:
 
       - name: Generate NBA rolling research
         run: python nba_rolling_research.py
-
+      - name: Generate NBA prop hit rates
+        run: python nba_prop_hit_rates.py --season 2026-27
       - name: Upload NBA research reports
         uses: actions/upload-artifact@v4
         with:
@@ -46,6 +47,7 @@ jobs:
           path: |
             exports/rolling_form.csv
             exports/non_overlapping_trends.csv
+            exports/prop_hit_rates.csv
           if-no-files-found: error
 
       - name: Validate database
