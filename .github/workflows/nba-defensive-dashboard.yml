@@ -1,0 +1,51 @@
+
+name: NBA LOCKBOX Defensive Dashboard
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '40 12 * * *'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: nba-lockbox-defensive-dashboard
+  cancel-in-progress: false
+
+jobs:
+  dashboard:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Generate defensive matchup dashboard
+        run: python nba_defensive_dashboard.py
+
+      - name: Commit updated defensive research
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add research_exports/team_defensive_dashboard.csv research_exports/team_opponent_game_logs.csv research_exports/team_defensive_exclusions.csv research_exports/team_defensive_status.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Refresh NBA defensive matchup research"
+            git push
+          fi
+
+      - name: Upload defensive dashboard backup
+        uses: actions/upload-artifact@v4
+        with:
+          name: nba-lockbox-defensive-dashboard
+          path: |
+            research_exports/team_defensive_dashboard.csv
+            research_exports/team_opponent_game_logs.csv
+            research_exports/team_defensive_exclusions.csv
+            research_exports/team_defensive_status.json
+          retention-days: 14
