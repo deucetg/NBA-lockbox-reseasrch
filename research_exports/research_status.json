@@ -1,12 +1,12 @@
 {
-  "generated_at_utc": "2026-11-11T13:35:25.091808+00:00",
-  "latest_game_date": "20261110",
+  "generated_at_utc": "2026-11-12T13:38:26.914402+00:00",
+  "latest_game_date": "20261111",
   "season": "2026-27",
-  "database_games": 264,
-  "database_boxscore_rows": 5883,
-  "eligible_players": 462,
-  "exported_player_game_rows": 3609,
-  "hit_rate_rows": 180180,
+  "database_games": 274,
+  "database_boxscore_rows": 6106,
+  "eligible_players": 464,
+  "exported_player_game_rows": 3832,
+  "hit_rate_rows": 180960,
   "source": "ESPN player_boxscores via NBA LOCKBOX SQLite",
   "limitations": "Current database season only; missing/incomplete windows labeled; not NBA.com tracking; no sportsbook odds."
 }
