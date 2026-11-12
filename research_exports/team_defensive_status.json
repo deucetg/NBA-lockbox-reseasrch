@@ -1,0 +1,16 @@
+{
+  "generated_at_utc": "2026-11-12T23:50:38.673153+00:00",
+  "season": "2026-27",
+  "latest_game_date": "20261111",
+  "eligible_teams": 30,
+  "eligible_games": 170,
+  "excluded_games": 0,
+  "dashboard_rows": 150,
+  "notes": [
+    "Research only. No odds or tickets.",
+    "ORTG/DRTG use estimated possessions, not official NBA.com ratings.",
+    "Official pace, defensive scheme and opponent by position unavailable.",
+    "No official team ratings should be inferred from these estimates.",
+    "All windows include sample_n and complete labels."
+  ]
+}
