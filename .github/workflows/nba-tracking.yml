@@ -1,0 +1,42 @@
+
+name: NBA Tracking Research
+
+
+on:
+  workflow_dispatch:
+  pull_request:
+    branches:
+      - main
+  
+
+permissions:
+  contents: read
+
+jobs:
+  tracking-test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Test NBA tracking collector
+        run: python nba_tracking_collector.py
+
+      - name: Upload tracking CSV files
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: nba-tracking-test
+          path: exports/tracking/
+          if-no-files-found: warn
+          retention-days: 7
