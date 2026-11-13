@@ -1,0 +1,34 @@
+name: NBA LOCKBOX NBA.com Tracking Connection Test
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test-nba-tracking:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Checkout NBA LOCKBOX
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Check NBA.com passing and rebounding L5 feeds
+        run: python nba_tracking_probe.py
+
+      - name: Upload diagnostics and sample data
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: nba-tracking-connectivity-test
+          path: |
+            research_exports/nba_tracking_probe_status.json
+            research_exports/nba_tracking_probe_l5.csv
+          if-no-files-found: warn
+          retention-days: 14
