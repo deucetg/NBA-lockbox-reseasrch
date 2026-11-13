@@ -1,0 +1,30 @@
+{
+  "generated_at_utc": "2026-11-13T18:42:02.036627+00:00",
+  "latest_evaluated_date": "20261112",
+  "earliest_evaluated_date": "20261029",
+  "input": "research_exports/player_last20.csv",
+  "eligible_player_games": 1800,
+  "signal_evaluations": 9553,
+  "summary_groups": 60,
+  "perfect_L5_misses": 680,
+  "perfect_L5_misses_with_20pct_minutes_drop": 291,
+  "markets": [
+    "PTS",
+    "REB",
+    "AST",
+    "3PM",
+    "PRA",
+    "PR",
+    "PA",
+    "RA"
+  ],
+  "notes": [
+    "Research only: no odds, stakes, tickets or model probabilities.",
+    "Walk-forward: games on and after the target date are never used as predictors.",
+    "Only L5 4/5+ or complete L8 7/8+ signals evaluated; observational selection bias.",
+    "player_last20.csv retains up to 20 games/player; older history is unavailable.",
+    "Minutes below 80% of prior L5 marked as association, not causal diagnosis.",
+    "No lineup, injury, opponent-by-position, potential assists or rebound chances.",
+    "Results for different thresholds and same-game players are correlated."
+  ]
+}
