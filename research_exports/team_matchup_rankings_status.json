@@ -1,0 +1,16 @@
+{
+  "generated_at_utc": "2026-11-13T00:06:33.584308+00:00",
+  "season": "2026-27",
+  "input_rows": 150,
+  "complete_rows": 104,
+  "identical_scoring_rows": 7,
+  "systemic_scoring_issue": false,
+  "ranking_rows": 936,
+  "audit_flags": 53,
+  "notes": [
+    "Ranks opponent box-score allowances, not player-specific odds.",
+    "Official pace and defensive schemes are not available.",
+    "DRTG is an estimate, not official NBA.com defensive rating.",
+    "No betting recommendations are generated."
+  ]
+}
