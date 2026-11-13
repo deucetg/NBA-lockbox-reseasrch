@@ -29,17 +29,22 @@ jobs:
       - name: Generate defensive matchup dashboard
         run: python nba_defensive_dashboard.py
 
-      - name: Commit updated defensive research
+      - name: Generate matchup rankings and audit
+        run: python nba_matchup_rankings.py
+
+      - name: Commit updated research reports
+        if: always()
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add research_exports/team_defensive_dashboard.csv research_exports/team_opponent_game_logs.csv research_exports/team_defensive_exclusions.csv research_exports/team_defensive_status.json
+          git add research_exports/
           if ! git diff --cached --quiet; then
-            git commit -m "Refresh NBA defensive matchup research"
+            git commit -m "Refresh NBA defensive research and rankings"
             git push
           fi
 
       - name: Upload defensive dashboard backup
+        if: always()
         uses: actions/upload-artifact@v4
         with:
           name: nba-lockbox-defensive-dashboard
@@ -48,4 +53,7 @@ jobs:
             research_exports/team_opponent_game_logs.csv
             research_exports/team_defensive_exclusions.csv
             research_exports/team_defensive_status.json
+            research_exports/team_matchup_rankings.csv
+            research_exports/team_matchup_audit.csv
+            research_exports/team_matchup_rankings_status.json
           retention-days: 14
