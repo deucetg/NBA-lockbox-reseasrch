@@ -1,0 +1,69 @@
+
+name: NBA LOCKBOX Shooting Momentum Test
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test-scanner:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Check source and input
+        run: |
+          test -f nba_shooting_momentum.py
+          test -s research_exports/player_last20.csv
+          python -m py_compile nba_shooting_momentum.py
+
+      - name: Run scanner
+        run: python nba_shooting_momentum.py
+
+      - name: Validate output files and status
+        run: |
+          python - <<'PY'
+          import csv, json
+          from pathlib import Path
+
+          root = Path('research_exports')
+          status = json.loads(
+              (root / 'shooting_momentum_status.json').read_text()
+          )
+
+          assert status['players_with_logs'] > 0, status
+
+          for filename in (
+              'shooting_momentum_current.csv',
+              'shooting_momentum_walkforward.csv'
+          ):
+              with (root / filename).open(
+                  newline='', encoding='utf-8'
+              ) as f:
+                  rows = list(csv.DictReader(f))
+
+              print(f'{filename}: {len(rows)} rows')
+
+          print('Scanner status:', json.dumps(status, indent=2))
+          PY
+
+      - name: Upload test results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: shooting-momentum-test-results
+          path: |
+            research_exports/shooting_momentum_current.csv
+            research_exports/shooting_momentum_walkforward.csv
+            research_exports/shooting_momentum_status.json
+          if-no-files-found: warn
