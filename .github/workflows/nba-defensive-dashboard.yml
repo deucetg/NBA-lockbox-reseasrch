@@ -26,34 +26,34 @@ jobs:
         with:
           python-version: '3.11'
 
-      - name: Generate defensive matchup dashboard
+      - name: Generate player research exports
+        run: python nba_research_export.py
+
+      - name: Generate defensive dashboard
         run: python nba_defensive_dashboard.py
 
-      - name: Generate matchup rankings and audit
+      - name: Generate matchup rankings
         run: python nba_matchup_rankings.py
 
-      - name: Commit updated research reports
+      - name: Validate and unify research
+        run: python nba_lockbox_unified_research.py
+
+      - name: Commit research reports
         if: always()
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add research_exports/
           if ! git diff --cached --quiet; then
-            git commit -m "Refresh NBA defensive research and rankings"
-            git push
+            git commit -m "Refresh NBA LOCKBOX unified research"
+            git pull --rebase origin main
+            git push origin HEAD:main
           fi
 
-      - name: Upload defensive dashboard backup
+      - name: Upload research backup
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: nba-lockbox-defensive-dashboard
-          path: |
-            research_exports/team_defensive_dashboard.csv
-            research_exports/team_opponent_game_logs.csv
-            research_exports/team_defensive_exclusions.csv
-            research_exports/team_defensive_status.json
-            research_exports/team_matchup_rankings.csv
-            research_exports/team_matchup_audit.csv
-            research_exports/team_matchup_rankings_status.json
+          name: nba-lockbox-unified-research
+          path: research_exports/
           retention-days: 14
