@@ -1,0 +1,52 @@
+name: NBA LOCKBOX Walk-Forward Research Audit
+
+on:
+  workflow_dispatch:
+  schedule:
+    # Follows the existing player exports (12:20 UTC) and matchup job (12:40 UTC).
+    - cron: '15 14 * * *'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: nba-lockbox-walkforward-audit
+  cancel-in-progress: false
+
+jobs:
+  research-audit:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Run regression tests
+        run: python -m unittest discover -s tests -p 'test_walkforward_audit.py' -v
+
+      - name: Generate walk-forward research audit
+        run: python nba_walkforward_audit.py
+
+      - name: Commit research-only reports
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add research_exports/walkforward_*.csv research_exports/walkforward_status.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Update walk-forward NBA research audit"
+            git pull --rebase origin main
+            git push origin HEAD:main
+          fi
+
+      - name: Upload independent research backup
+        uses: actions/upload-artifact@v4
+        with:
+          name: nba-lockbox-walkforward-audit
+          path: |
+            research_exports/walkforward_*.csv
+            research_exports/walkforward_status.json
+          retention-days: 14
