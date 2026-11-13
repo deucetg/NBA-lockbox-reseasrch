@@ -1,0 +1,53 @@
+game_id,scheduled_utc,home_team_id,away_team_id,home_team_name,away_team_name,event_status,source
+401909296,2026-11-14T00:00Z,11,18,Indiana Pacers,New York Knicks,STATUS_SCHEDULED,ESPN scoreboard
+401909297,2026-11-14T00:00Z,19,15,Orlando Magic,Milwaukee Bucks,STATUS_SCHEDULED,ESPN scoreboard
+401909298,2026-11-14T01:00Z,14,5,Miami Heat,Cleveland Cavaliers,STATUS_SCHEDULED,ESPN scoreboard
+401909299,2026-11-14T01:00Z,4,1,Chicago Bulls,Atlanta Hawks,STATUS_SCHEDULED,ESPN scoreboard
+401909300,2026-11-14T01:00Z,3,29,New Orleans Pelicans,Memphis Grizzlies,STATUS_SCHEDULED,ESPN scoreboard
+401909301,2026-11-14T01:30Z,10,26,Houston Rockets,Utah Jazz,STATUS_SCHEDULED,ESPN scoreboard
+401909302,2026-11-14T02:30Z,24,9,San Antonio Spurs,Golden State Warriors,STATUS_SCHEDULED,ESPN scoreboard
+401909303,2026-11-14T03:00Z,23,22,Sacramento Kings,Portland Trail Blazers,STATUS_SCHEDULED,ESPN scoreboard
+401909304,2026-11-14T03:30Z,12,25,LA Clippers,Oklahoma City Thunder,STATUS_SCHEDULED,ESPN scoreboard
+401909980,2026-11-15T00:00Z,3,7,New Orleans Pelicans,Denver Nuggets,STATUS_SCHEDULED,ESPN scoreboard
+401909981,2026-11-15T00:30Z,5,6,Cleveland Cavaliers,Dallas Mavericks,STATUS_SCHEDULED,ESPN scoreboard
+401909982,2026-11-15T01:00Z,14,8,Miami Heat,Detroit Pistons,STATUS_SCHEDULED,ESPN scoreboard
+401909983,2026-11-15T01:00Z,29,17,Memphis Grizzlies,Brooklyn Nets,STATUS_SCHEDULED,ESPN scoreboard
+401909984,2026-11-15T01:00Z,16,4,Minnesota Timberwolves,Chicago Bulls,STATUS_SCHEDULED,ESPN scoreboard
+401909985,2026-11-15T18:00Z,20,11,Philadelphia 76ers,Indiana Pacers,STATUS_SCHEDULED,ESPN scoreboard
+401909986,2026-11-15T21:00Z,21,13,Phoenix Suns,Los Angeles Lakers,STATUS_SCHEDULED,ESPN scoreboard
+401909987,2026-11-15T21:30Z,12,30,LA Clippers,Charlotte Hornets,STATUS_SCHEDULED,ESPN scoreboard
+401909988,2026-11-15T22:00Z,26,24,Utah Jazz,San Antonio Spurs,STATUS_SCHEDULED,ESPN scoreboard
+401909989,2026-11-15T23:00Z,2,6,Boston Celtics,Dallas Mavericks,STATUS_SCHEDULED,ESPN scoreboard
+401909990,2026-11-15T23:00Z,28,18,Toronto Raptors,New York Knicks,STATUS_SCHEDULED,ESPN scoreboard
+401909991,2026-11-16T00:00Z,27,10,Washington Wizards,Houston Rockets,STATUS_SCHEDULED,ESPN scoreboard
+401909992,2026-11-16T01:00Z,15,1,Milwaukee Bucks,Atlanta Hawks,STATUS_SCHEDULED,ESPN scoreboard
+401909993,2026-11-16T02:00Z,23,25,Sacramento Kings,Oklahoma City Thunder,STATUS_SCHEDULED,ESPN scoreboard
+401909994,2026-11-17T00:00Z,2,19,Boston Celtics,Orlando Magic,STATUS_SCHEDULED,ESPN scoreboard
+401909995,2026-11-17T00:00Z,5,4,Cleveland Cavaliers,Chicago Bulls,STATUS_SCHEDULED,ESPN scoreboard
+401909996,2026-11-17T00:00Z,27,29,Washington Wizards,Memphis Grizzlies,STATUS_SCHEDULED,ESPN scoreboard
+401909997,2026-11-17T00:30Z,17,20,Brooklyn Nets,Philadelphia 76ers,STATUS_SCHEDULED,ESPN scoreboard
+401909998,2026-11-17T00:30Z,14,10,Miami Heat,Houston Rockets,STATUS_SCHEDULED,ESPN scoreboard
+401909999,2026-11-17T01:00Z,16,22,Minnesota Timberwolves,Portland Trail Blazers,STATUS_SCHEDULED,ESPN scoreboard
+401910000,2026-11-17T01:00Z,3,9,New Orleans Pelicans,Golden State Warriors,STATUS_SCHEDULED,ESPN scoreboard
+401910001,2026-11-17T02:00Z,7,21,Denver Nuggets,Phoenix Suns,STATUS_SCHEDULED,ESPN scoreboard
+401910002,2026-11-18T00:30Z,28,18,Toronto Raptors,New York Knicks,STATUS_SCHEDULED,ESPN scoreboard
+401910003,2026-11-18T01:00Z,16,22,Minnesota Timberwolves,Portland Trail Blazers,STATUS_SCHEDULED,ESPN scoreboard
+401910004,2026-11-18T01:00Z,24,8,San Antonio Spurs,Detroit Pistons,STATUS_SCHEDULED,ESPN scoreboard
+401910006,2026-11-18T03:30Z,12,26,LA Clippers,Utah Jazz,STATUS_SCHEDULED,ESPN scoreboard
+401910005,2026-11-18T04:00Z,13,30,Los Angeles Lakers,Charlotte Hornets,STATUS_SCHEDULED,ESPN scoreboard
+401910007,2026-11-19T00:00Z,5,29,Cleveland Cavaliers,Memphis Grizzlies,STATUS_SCHEDULED,ESPN scoreboard
+401910008,2026-11-19T00:00Z,11,10,Indiana Pacers,Houston Rockets,STATUS_SCHEDULED,ESPN scoreboard
+401910009,2026-11-19T00:00Z,14,15,Miami Heat,Milwaukee Bucks,STATUS_SCHEDULED,ESPN scoreboard
+401910010,2026-11-19T00:00Z,19,20,Orlando Magic,Philadelphia 76ers,STATUS_SCHEDULED,ESPN scoreboard
+401910011,2026-11-19T00:30Z,17,4,Brooklyn Nets,Chicago Bulls,STATUS_SCHEDULED,ESPN scoreboard
+401910012,2026-11-19T00:30Z,28,27,Toronto Raptors,Washington Wizards,STATUS_SCHEDULED,ESPN scoreboard
+401910013,2026-11-19T01:00Z,3,8,New Orleans Pelicans,Detroit Pistons,STATUS_SCHEDULED,ESPN scoreboard
+401910014,2026-11-19T01:00Z,25,1,Oklahoma City Thunder,Atlanta Hawks,STATUS_SCHEDULED,ESPN scoreboard
+401910015,2026-11-19T02:00Z,7,2,Denver Nuggets,Boston Celtics,STATUS_SCHEDULED,ESPN scoreboard
+401910016,2026-11-19T02:30Z,6,9,Dallas Mavericks,Golden State Warriors,STATUS_SCHEDULED,ESPN scoreboard
+401910017,2026-11-19T03:00Z,13,26,Los Angeles Lakers,Utah Jazz,STATUS_SCHEDULED,ESPN scoreboard
+401910018,2026-11-19T03:00Z,23,21,Sacramento Kings,Phoenix Suns,STATUS_SCHEDULED,ESPN scoreboard
+401910019,2026-11-20T01:00Z,29,9,Memphis Grizzlies,Golden State Warriors,STATUS_SCHEDULED,ESPN scoreboard
+401910020,2026-11-20T01:00Z,15,22,Milwaukee Bucks,Portland Trail Blazers,STATUS_SCHEDULED,ESPN scoreboard
+401910021,2026-11-20T01:00Z,16,18,Minnesota Timberwolves,New York Knicks,STATUS_SCHEDULED,ESPN scoreboard
+401910022,2026-11-20T01:00Z,24,12,San Antonio Spurs,LA Clippers,STATUS_SCHEDULED,ESPN scoreboard
