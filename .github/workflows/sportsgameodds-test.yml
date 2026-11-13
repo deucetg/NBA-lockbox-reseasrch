@@ -1,0 +1,103 @@
+
+name: NBA LOCKBOX SportsGameOdds Test
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test-api:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Test NBA FanDuel API
+        env:
+          SPORTSGAMEODDS_API_KEY: ${{ secrets.SPORTSGAMEODDS_API_KEY }}
+        run: |
+          python - <<'PY'
+          import os
+          import json
+          import urllib.request
+          import urllib.parse
+          import urllib.error
+
+          key = os.environ.get("SPORTSGAMEODDS_API_KEY")
+          if not key:
+              raise SystemExit("API secret is missing")
+
+          params = urllib.parse.urlencode({
+              "leagueID": "NBA",
+              "oddsAvailable": "true",
+              "bookmakerID": "fanduel",
+              "includeAltLines": "true",
+              "limit": "2"
+          })
+
+          url = (
+              "https://api.sportsgameodds.com/v2/events?"
+              + params
+          )
+
+          request = urllib.request.Request(
+              url,
+              headers={"x-api-key": key}
+          )
+
+          try:
+              with urllib.request.urlopen(
+                  request, timeout=30
+              ) as response:
+                  payload = json.load(response)
+          except urllib.error.HTTPError as exc:
+              raise SystemExit(
+                  f"API returned HTTP {exc.code}"
+              )
+
+          if not payload.get("success"):
+              raise SystemExit(
+                  "API request unsuccessful: "
+                  + str(payload.get("error", "unknown"))
+              )
+
+          events = payload.get("data", [])
+          markets = 0
+          fanduel_markets = 0
+          alternate_lines = 0
+
+          for event in events:
+              odds = event.get("odds") or {}
+              markets += len(odds)
+
+              for odd in odds.values():
+                  books = odd.get("byBookmaker") or {}
+                  fd = books.get("fanduel")
+
+                  if not isinstance(fd, dict):
+                      continue
+
+                  fanduel_markets += 1
+                  alternate_lines += len(
+                      fd.get("altLines") or []
+                  )
+
+          print("API authentication: SUCCESS")
+          print("NBA events returned:", len(events))
+          print("Total markets:", markets)
+          print("FanDuel markets:", fanduel_markets)
+          print("FanDuel alternate lines:", alternate_lines)
+
+          if not events:
+              print("No events returned for this request.")
+          elif not fanduel_markets:
+              print("No FanDuel markets found in sample.")
+          elif not alternate_lines:
+              print("No FanDuel alt lines found in sample.")
+          PY
