@@ -38,6 +38,9 @@ jobs:
       - name: Validate and unify research
         run: python nba_lockbox_unified_research.py
 
+      - name: Match players to upcoming opponents
+        run: python nba_upcoming_matchups.py
+
       - name: Commit research reports
         if: always()
         run: |
@@ -45,7 +48,7 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add research_exports/
           if ! git diff --cached --quiet; then
-            git commit -m "Refresh NBA LOCKBOX unified research"
+            git commit -m "Refresh NBA LOCKBOX matchup intelligence"
             git pull --rebase origin main
             git push origin HEAD:main
           fi
@@ -54,6 +57,6 @@ jobs:
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: nba-lockbox-unified-research
+          name: nba-lockbox-matchup-intelligence
           path: research_exports/
           retention-days: 14
