@@ -21,10 +21,12 @@ jobs:
         with:
           python-version: '3.11'
 
-      - name: Verify collector
+      - name: Verify Python scripts
         run: |
           test -f nba_odds_collector.py
+          test -f nba_odds_normalize.py
           python -m py_compile nba_odds_collector.py
+          python -m py_compile nba_odds_normalize.py
 
       - name: Collect FanDuel NBA odds
         env:
@@ -32,7 +34,45 @@ jobs:
           ODDS_EVENT_LIMIT: '2'
         run: python nba_odds_collector.py
 
-      - name: Upload odds snapshots
+      - name: Normalize FanDuel odds
+        run: |
+          python - <<'PY'
+          import subprocess
+          import sys
+          from pathlib import Path
+
+          files = sorted(
+              Path("odds_snapshots").glob(
+                  "*/fanduel_nba_*.json"
+              )
+          )
+
+          if not files:
+              raise SystemExit("No raw odds JSON found")
+
+          for file in files:
+              subprocess.run(
+                  [sys.executable,
+                   "nba_odds_normalize.py",
+                   str(file)],
+                  check=True
+              )
+
+          normalized = list(
+              Path("odds_snapshots").glob(
+                  "*/*_normalized.csv"
+              )
+          )
+
+          if not normalized:
+              raise SystemExit(
+                  "No normalized CSV generated"
+              )
+
+          print("Normalized files:", len(normalized))
+          PY
+
+      - name: Upload complete odds package
         if: success()
         uses: actions/upload-artifact@v4
         with:
