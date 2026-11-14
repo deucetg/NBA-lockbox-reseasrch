@@ -1,0 +1,29 @@
+name: NBA LOCKBOX V4 Source Probe
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  source-probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Test NBA position endpoint
+        run: python nba_v4_source_probe.py
+      - name: Upload source probe report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: nba-v4-source-probe
+          path: research_exports/nba_v4_source_probe.json
+          if-no-files-found: warn
+          retention-days: 14
