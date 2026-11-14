@@ -41,35 +41,45 @@ jobs:
           import sys
           from pathlib import Path
 
-          files = sorted(
-              Path("odds_snapshots").glob(
+          snapshots = sorted(
+              p for p in Path("odds_snapshots").glob(
                   "*/fanduel_nba_*.json"
               )
+              if not p.name.endswith("_status.json")
           )
 
-          if not files:
-              raise SystemExit("No raw odds JSON found")
+          if not snapshots:
+              raise SystemExit(
+                  "No raw FanDuel snapshot JSON found"
+              )
 
-          for file in files:
+          for snapshot in snapshots:
               subprocess.run(
-                  [sys.executable,
-                   "nba_odds_normalize.py",
-                   str(file)],
+                  [
+                      sys.executable,
+                      "nba_odds_normalize.py",
+                      str(snapshot)
+                  ],
                   check=True
               )
 
-          normalized = list(
+          normalized = sorted(
               Path("odds_snapshots").glob(
                   "*/*_normalized.csv"
               )
           )
 
-          if not normalized:
+          if len(normalized) != len(snapshots):
               raise SystemExit(
-                  "No normalized CSV generated"
+                  "Normalized CSV count does not match "
+                  "raw snapshot count"
               )
 
-          print("Normalized files:", len(normalized))
+          print(
+              "Successfully normalized",
+              len(normalized),
+              "FanDuel NBA snapshots"
+          )
           PY
 
       - name: Upload complete odds package
