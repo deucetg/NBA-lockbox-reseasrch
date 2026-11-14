@@ -1,0 +1,31 @@
+name: NBA LOCKBOX Position Source Audit V2
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Run position source audit v2
+        run: python nba_position_source_audit_v2.py
+      - name: Upload position audit v2 results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: nba-position-source-audit-v2
+          path: |
+            research_exports/player_positions_audit_v2.csv
+            research_exports/player_position_audit_v2.json
+          if-no-files-found: warn
+          retention-days: 14
