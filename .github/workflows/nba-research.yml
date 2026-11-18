@@ -1,3 +1,4 @@
+
 name: NBA LOCKBOX Daily Research
 
 on:
@@ -6,7 +7,8 @@ on:
     - cron: "35 11 * * *"
 
 permissions:
-  contents: write
+  contents: read
+  actions: read
 
 concurrency:
   group: nba-lockbox-daily
@@ -30,11 +32,139 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
+      - name: Restore latest database backup
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          mkdir -p data
+          mkdir -p /tmp/nba-lockbox-restore
+
+          restored=false
+
+          while read -r run_id; do
+            if [ "$run_id" = "$GITHUB_RUN_ID" ]; then
+              continue
+            fi
+
+            echo "Checking backup from run $run_id"
+
+            mkdir -p /tmp/nba-lockbox-candidate
+
+            if gh run download "$run_id" \
+              --repo "$GITHUB_REPOSITORY" \
+              --name nba-lockbox-database \
+              --dir /tmp/nba-lockbox-candidate; then
+
+              backup=$(find /tmp/nba-lockbox-candidate \
+                -type f -name nba_lockbox.sqlite \
+                -print -quit)
+
+              if [ -n "$backup" ]; then
+                if python - "$backup" <<'PY'
+          import sqlite3
+          import sys
+
+          try:
+              with sqlite3.connect(sys.argv[1]) as db:
+                  result = db.execute(
+                      "PRAGMA integrity_check"
+                  ).fetchone()[0]
+                  assert result == "ok"
+                  db.execute("SELECT COUNT(*) FROM games")
+                  db.execute("SELECT COUNT(*) FROM pbp_events")
+          except Exception as exc:
+              print(f"Invalid backup: {exc}")
+              sys.exit(1)
+          PY
+                then
+                  cp "$backup" data/nba_lockbox.sqlite
+                  echo "Restored backup from run $run_id"
+                  restored=true
+                  break
+                fi
+              fi
+            fi
+
+            rm -rf /tmp/nba-lockbox-candidate
+          done < <(
+            gh run list \
+              --repo "$GITHUB_REPOSITORY" \
+              --workflow nba-research.yml \
+              --limit 30 \
+              --json databaseId \
+              --jq '.[].databaseId'
+          )
+
+          if [ "$restored" = false ]; then
+            echo "No valid Actions backup found."
+
+            if [ -f data/nba_lockbox.sqlite ]; then
+              echo "Using existing repository database."
+            else
+              echo "ERROR: No database baseline available."
+              exit 1
+            fi
+          fi
+
+          python - <<'PY'
+          import sqlite3
+
+          with sqlite3.connect(
+              "data/nba_lockbox.sqlite"
+          ) as db:
+              games = db.execute(
+                  "SELECT COUNT(*) FROM games"
+              ).fetchone()[0]
+
+              latest = db.execute(
+                  "SELECT MAX(game_date) FROM games"
+              ).fetchone()[0]
+
+              plays = db.execute(
+                  "SELECT COUNT(*) FROM pbp_events"
+              ).fetchone()[0]
+
+          print(f"Restored games: {games}")
+          print(f"Restored plays: {plays}")
+          print(f"Latest game: {latest}")
+          PY
+
       - name: Collect NBA play-by-play
-        run: python nba_collector.py
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          python - <<'PY'
+          import subprocess
+          import sys
+          from datetime import datetime, timedelta, timezone
+
+          today = datetime.now(timezone.utc).date()
+
+          for days_ago in range(7, 0, -1):
+              date = today - timedelta(days=days_ago)
+              formatted = date.strftime("%Y%m%d")
+
+              print(
+                  f"Collecting NBA games: {formatted}",
+                  flush=True
+              )
+
+              subprocess.run(
+                  [
+                      sys.executable,
+                      "nba_collector.py",
+                      formatted
+                  ],
+                  check=True
+              )
+          PY
+
       - name: Collect NBA player box scores
         run: python nba_boxscore_collector.py
-   
 
       - name: Generate NBA rolling research
         run: python nba_rolling_research.py
@@ -47,11 +177,11 @@ jobs:
             exports/rolling_form.csv
             exports/non_overlapping_trends.csv
           if-no-files-found: error
+          retention-days: 30
 
       - name: Validate database
         run: |
           python - <<'PY'
-
           import sqlite3
           from pathlib import Path
 
@@ -59,13 +189,31 @@ jobs:
           assert path.exists(), "Database missing"
 
           with sqlite3.connect(path) as db:
+              integrity = db.execute(
+                  "PRAGMA integrity_check"
+              ).fetchone()[0]
+
+              assert integrity == "ok", (
+                  f"Database integrity: {integrity}"
+              )
+
               games = db.execute(
                   "SELECT COUNT(*) FROM games"
               ).fetchone()[0]
+
               plays = db.execute(
                   "SELECT COUNT(*) FROM pbp_events"
               ).fetchone()[0]
-              errors = db.execute("""
+
+              boxscores = db.execute(
+                  "SELECT COUNT(*) FROM player_boxscores"
+              ).fetchone()[0]
+
+              latest = db.execute(
+                  "SELECT MAX(game_date) FROM games"
+              ).fetchone()[0]
+
+              duplicates = db.execute("""
                   SELECT COUNT(*) FROM (
                       SELECT game_id, play_id
                       FROM pbp_events
@@ -74,8 +222,30 @@ jobs:
                   )
               """).fetchone()[0]
 
-          assert errors == 0, "Duplicate plays found"
-          print(f"Games: {games}; Plays: {plays}")
+              missing_boxscores = db.execute("""
+                  SELECT COUNT(*)
+                  FROM games
+                  WHERE game_id NOT IN (
+                      SELECT game_id
+                      FROM boxscore_imports
+                  )
+              """).fetchone()[0]
+
+          assert games > 0, "No games in database"
+          assert plays > 0, "No play-by-play events"
+          assert duplicates == 0, "Duplicate plays found"
+
+          print(f"Games: {games}")
+          print(f"Play-by-play events: {plays}")
+          print(f"Player box-score rows: {boxscores}")
+          print(f"Latest game: {latest}")
+          print(f"Games awaiting box scores: {missing_boxscores}")
+
+          if missing_boxscores:
+              print(
+                  "WARNING: Box-score backlog remains. "
+                  "Collector processes up to 30 games per run."
+              )
           PY
 
       - name: Save database backup
@@ -83,15 +253,12 @@ jobs:
         with:
           name: nba-lockbox-database
           path: data/nba_lockbox.sqlite
+          if-no-files-found: error
           retention-days: 30
 
-      - name: Preserve database between runs
+      - name: Complete daily research
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email \
-            "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/nba_lockbox.sqlite
-          if ! git diff --cached --quiet; then
-            git commit -m "Update NBA research database"
-            git push
-          fi
+          echo "NBA LOCKBOX collection completed."
+          echo "Database backup uploaded as an artifact."
+          echo "No oversized SQLite file pushed to Git."
+          echo "Review game coverage and box-score backlog."
