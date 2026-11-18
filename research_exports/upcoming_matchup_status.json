@@ -1,10 +1,10 @@
 {
-  "generated_at_utc": "2026-11-17T13:53:54.691904+00:00",
+  "generated_at_utc": "2026-11-18T13:54:53.185542+00:00",
   "source": "ESPN scoreboard",
   "days_checked": 7,
-  "upcoming_games": 53,
-  "player_matchup_rows": 8280,
-  "defensive_context_rows": 6301,
+  "upcoming_games": 51,
+  "player_matchup_rows": 7970,
+  "defensive_context_rows": 6052,
   "schedule_issues": 0,
   "warnings": [
     "Scheduled opponent is verified, player participation is not.",

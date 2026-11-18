@@ -1,9 +1,4 @@
 game_id,scheduled_utc,home_team_id,away_team_id,home_team_name,away_team_name,event_status,source
-401910002,2026-11-18T00:30Z,28,18,Toronto Raptors,New York Knicks,STATUS_SCHEDULED,ESPN scoreboard
-401910003,2026-11-18T01:00Z,16,22,Minnesota Timberwolves,Portland Trail Blazers,STATUS_SCHEDULED,ESPN scoreboard
-401910004,2026-11-18T01:00Z,24,8,San Antonio Spurs,Detroit Pistons,STATUS_SCHEDULED,ESPN scoreboard
-401910006,2026-11-18T03:30Z,12,26,LA Clippers,Utah Jazz,STATUS_SCHEDULED,ESPN scoreboard
-401910005,2026-11-18T04:00Z,13,30,Los Angeles Lakers,Charlotte Hornets,STATUS_SCHEDULED,ESPN scoreboard
 401910007,2026-11-19T00:00Z,5,29,Cleveland Cavaliers,Memphis Grizzlies,STATUS_SCHEDULED,ESPN scoreboard
 401910008,2026-11-19T00:00Z,11,10,Indiana Pacers,Houston Rockets,STATUS_SCHEDULED,ESPN scoreboard
 401910009,2026-11-19T00:00Z,14,15,Miami Heat,Milwaukee Bucks,STATUS_SCHEDULED,ESPN scoreboard
@@ -52,3 +47,6 @@ game_id,scheduled_utc,home_team_id,away_team_id,home_team_name,away_team_name,ev
 401910043,2026-11-24T01:30Z,10,12,Houston Rockets,LA Clippers,STATUS_SCHEDULED,ESPN scoreboard
 401910044,2026-11-24T03:00Z,13,26,Los Angeles Lakers,Utah Jazz,STATUS_SCHEDULED,ESPN scoreboard
 401910045,2026-11-24T03:00Z,23,24,Sacramento Kings,San Antonio Spurs,STATUS_SCHEDULED,ESPN scoreboard
+401909314,2026-11-25T00:00Z,19,8,Orlando Magic,Detroit Pistons,STATUS_SCHEDULED,ESPN scoreboard
+401909315,2026-11-25T01:00Z,27,2,Washington Wizards,Boston Celtics,STATUS_SCHEDULED,ESPN scoreboard
+401909316,2026-11-25T03:00Z,7,6,Denver Nuggets,Dallas Mavericks,STATUS_SCHEDULED,ESPN scoreboard
