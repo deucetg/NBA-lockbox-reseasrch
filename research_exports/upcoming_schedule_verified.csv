@@ -1,13 +1,4 @@
 game_id,scheduled_utc,home_team_id,away_team_id,home_team_name,away_team_name,event_status,source
-401909305,2026-11-21T00:00Z,1,30,Atlanta Hawks,Charlotte Hornets,STATUS_SCHEDULED,ESPN scoreboard
-401909306,2026-11-21T00:30Z,17,19,Brooklyn Nets,Orlando Magic,STATUS_SCHEDULED,ESPN scoreboard
-401909307,2026-11-21T00:30Z,5,11,Cleveland Cavaliers,Indiana Pacers,STATUS_SCHEDULED,ESPN scoreboard
-401909308,2026-11-21T00:30Z,8,28,Detroit Pistons,Toronto Raptors,STATUS_SCHEDULED,ESPN scoreboard
-401909309,2026-11-21T01:00Z,4,27,Chicago Bulls,Washington Wizards,STATUS_SCHEDULED,ESPN scoreboard
-401909310,2026-11-21T01:00Z,25,3,Oklahoma City Thunder,New Orleans Pelicans,STATUS_SCHEDULED,ESPN scoreboard
-401909311,2026-11-21T02:30Z,26,21,Utah Jazz,Phoenix Suns,STATUS_SCHEDULED,ESPN scoreboard
-401909312,2026-11-21T03:00Z,7,10,Denver Nuggets,Houston Rockets,STATUS_SCHEDULED,ESPN scoreboard
-401909313,2026-11-21T03:00Z,13,23,Los Angeles Lakers,Sacramento Kings,STATUS_SCHEDULED,ESPN scoreboard
 401910023,2026-11-21T18:00Z,20,15,Philadelphia 76ers,Milwaukee Bucks,STATUS_SCHEDULED,ESPN scoreboard
 401910024,2026-11-22T00:30Z,18,22,New York Knicks,Portland Trail Blazers,STATUS_SCHEDULED,ESPN scoreboard
 401910025,2026-11-22T01:00Z,6,12,Dallas Mavericks,LA Clippers,STATUS_SCHEDULED,ESPN scoreboard
@@ -43,3 +34,14 @@ game_id,scheduled_utc,home_team_id,away_team_id,home_team_name,away_team_name,ev
 401909323,2026-11-26T01:30Z,10,21,Houston Rockets,Phoenix Suns,STATUS_SCHEDULED,ESPN scoreboard
 401909324,2026-11-26T03:00Z,9,23,Golden State Warriors,Sacramento Kings,STATUS_SCHEDULED,ESPN scoreboard
 401909325,2026-11-26T03:00Z,22,24,Portland Trail Blazers,San Antonio Spurs,STATUS_SCHEDULED,ESPN scoreboard
+401909326,2026-11-28T00:00Z,18,14,New York Knicks,Miami Heat,STATUS_SCHEDULED,ESPN scoreboard
+401909327,2026-11-28T00:30Z,8,15,Detroit Pistons,Milwaukee Bucks,STATUS_SCHEDULED,ESPN scoreboard
+401909328,2026-11-28T00:30Z,11,20,Indiana Pacers,Philadelphia 76ers,STATUS_SCHEDULED,ESPN scoreboard
+401909329,2026-11-28T00:30Z,28,17,Toronto Raptors,Brooklyn Nets,STATUS_SCHEDULED,ESPN scoreboard
+401909330,2026-11-28T01:00Z,2,1,Boston Celtics,Atlanta Hawks,STATUS_SCHEDULED,ESPN scoreboard
+401909331,2026-11-28T01:30Z,16,29,Minnesota Timberwolves,Memphis Grizzlies,STATUS_SCHEDULED,ESPN scoreboard
+401909332,2026-11-28T02:00Z,21,6,Phoenix Suns,Dallas Mavericks,STATUS_SCHEDULED,ESPN scoreboard
+401909333,2026-11-28T02:30Z,24,13,San Antonio Spurs,Los Angeles Lakers,STATUS_SCHEDULED,ESPN scoreboard
+401909334,2026-11-28T02:30Z,26,7,Utah Jazz,Denver Nuggets,STATUS_SCHEDULED,ESPN scoreboard
+401909335,2026-11-28T02:30Z,12,3,LA Clippers,New Orleans Pelicans,STATUS_SCHEDULED,ESPN scoreboard
+401909336,2026-11-28T02:30Z,22,9,Portland Trail Blazers,Golden State Warriors,STATUS_SCHEDULED,ESPN scoreboard
