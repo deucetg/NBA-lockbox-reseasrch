@@ -1,0 +1,76 @@
+name: NBA LOCKBOX V4 Player-Quarter Live Test
+
+on:
+  workflow_dispatch:
+    inputs:
+      game_date:
+        description: 'Completed NBA game date (YYYY-MM-DD)'
+        required: true
+        type: string
+        default: '2026-11-22'
+
+permissions:
+  contents: read
+
+jobs:
+  quarter-live-test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      NBA_GAME_DATE: ${{ inputs.game_date }}
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Check V4 collector syntax
+        run: |
+          python -m py_compile \
+            nba_player_quarter_collector_v4.py \
+            nba_player_quarter_incremental_v4.py \
+            nba_lockbox_quarter_player_engine.py \
+            nba_lockbox_defensive_resistance.py
+
+      - name: Collect and reconcile one completed NBA game
+        run: |
+          python nba_player_quarter_collector_v4.py \
+            --date "$NBA_GAME_DATE" \
+            --max-games 1 \
+            --out exports/v4_live_probe
+
+      - name: Require one independently verified player-quarter game
+        run: |
+          python - <<'PY'
+          import csv
+          import json
+          from pathlib import Path
+
+          root = Path('exports/v4_live_probe')
+          audit = json.loads((root / 'collector_audit_v4.json').read_text())
+          with (root / 'NBA_LOCKBOX_Player_Quarter_Verified_v4.csv').open(newline='') as file:
+              rows = list(csv.DictReader(file))
+          print(json.dumps(audit, indent=2))
+          print(f'Verified player-quarter records: {len(rows)}')
+          assert audit['verified_games'] >= 1, 'No game fully verified; examine game audit artifact'
+          assert len(rows) > 0, 'No verified player-quarter records'
+          assert all(r['verification_status'] == 'VERIFIED' for r in rows)
+          PY
+
+      - name: Calculate quarter milestones for verified data
+        run: |
+          python nba_lockbox_quarter_player_engine.py \
+            --quarters exports/v4_live_probe/NBA_LOCKBOX_Player_Quarter_Verified_v4.csv \
+            --out exports/v4_live_probe/quarter_analysis
+
+      - name: Upload collector reports even on failure
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: nba-lockbox-v4-live-quarter-test
+          path: exports/v4_live_probe/
+          if-no-files-found: warn
+          retention-days: 14
