@@ -1,0 +1,124 @@
+name: NBA LOCKBOX V4 CDN Source Probe
+
+on:
+  workflow_dispatch:
+    inputs:
+      game_date:
+        description: 'Completed NBA game date (YYYY-MM-DD)'
+        required: true
+        default: '2026-11-22'
+        type: string
+
+permissions:
+  contents: read
+
+jobs:
+  source-probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    env:
+      NBA_GAME_DATE: ${{ inputs.game_date }}
+    steps:
+      - name: Check NBA CDN and ESPN read-only sources
+        shell: bash
+        run: |
+          mkdir -p exports/v4_source_probe
+          python - <<'PY'
+          import json
+          import os
+          import sys
+          from datetime import date
+          from pathlib import Path
+          from urllib.error import HTTPError, URLError
+          from urllib.request import Request, urlopen
+
+          target = date.fromisoformat(os.environ['NBA_GAME_DATE'])
+          target_iso = target.isoformat()
+          target_es = target.strftime('%Y%m%d')
+          report = {'game_date': target_iso, 'checks': {}, 'selected_nba_game_id': None}
+          HEADERS = {
+              'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 Chrome/130 Safari/537.36',
+              'Accept': 'application/json',
+              'Referer': 'https://www.nba.com/'
+          }
+
+          def probe(name, url, parser):
+              try:
+                  with urlopen(Request(url, headers=HEADERS), timeout=16) as response:
+                      payload = json.load(response)
+                      http_code = response.status
+                  value = parser(payload)
+                  report['checks'][name] = {'status': 'ACCESSIBLE', 'http_status': http_code,
+                                            'url': url, 'details': value}
+                  print(name, 'ACCESSIBLE', json.dumps(value), flush=True)
+                  return payload
+              except (HTTPError, URLError, TimeoutError, ValueError, KeyError, TypeError, OSError) as exc:
+                  status = exc.code if isinstance(exc, HTTPError) else None
+                  report['checks'][name] = {'status': 'UNAVAILABLE', 'http_status': status,
+                                            'url': url, 'error': type(exc).__name__ + ': ' + str(exc)[:240]}
+                  print(name, 'UNAVAILABLE', report['checks'][name]['error'], flush=True)
+                  return None
+
+          def games_in_schedule(payload):
+              dates = (payload.get('leagueSchedule') or {}).get('gameDates') or []
+              found = []
+              for group in dates:
+                  for g in group.get('games', []):
+                      raw = str(g.get('gameDateEst') or g.get('gameDateTimeEst') or '')
+                      # The schedule fields are Eastern-time dates, not UTC game dates.
+                      if raw[:10] == target_iso:
+                          found.append(g)
+              return found
+
+          def schedule_summary(payload):
+              games = games_in_schedule(payload)
+              return {'games_on_target_date': len(games),
+                      'sample_game_ids': [str(g.get('gameId')) for g in games[:4]]}
+
+          espn = probe('espn_scoreboard',
+                       'https://site.api.espn.com/apis/site/v2/sports/basketball/nba/scoreboard?dates=' + target_es,
+                       lambda p: {'event_count': len(p.get('events') or [])})
+          schedule = None
+          for suffix in ('scheduleLeagueV2.json', 'scheduleLeagueV2_1.json'):
+              name = 'nba_cdn_' + suffix.replace('.', '_')
+              result = probe(name, 'https://cdn.nba.com/static/json/staticData/' + suffix, schedule_summary)
+              if result is not None:
+                  schedule = result
+                  break
+
+          games = games_in_schedule(schedule) if schedule else []
+          finals = [g for g in games if int(g.get('gameStatus') or 0) == 3]
+          chosen = finals[0] if finals else (games[0] if games else None)
+          if chosen and str(chosen.get('gameId', '')).isdigit():
+              gid = str(chosen['gameId'])
+              report['selected_nba_game_id'] = gid
+          else:
+              # Connectivity check only. This is NOT a 2026-27 game.
+              gid = '0022400001'
+              report['fallback_game_is_2024_sample'] = True
+
+          base = 'https://cdn.nba.com/static/json/liveData/'
+          b = probe('nba_cdn_boxscore', base + 'boxscore/boxscore_' + gid + '.json',
+                    lambda p: {'game_id': (p.get('game') or {}).get('gameId'),
+                               'has_home_team': bool((p.get('game') or {}).get('homeTeam')),
+                               'has_away_team': bool((p.get('game') or {}).get('awayTeam'))})
+          pbp = probe('nba_cdn_playbyplay', base + 'playbyplay/playbyplay_' + gid + '.json',
+                      lambda p: {'game_id': (p.get('game') or {}).get('gameId'),
+                                 'action_count': len((p.get('game') or {}).get('actions') or [])})
+          report['nba_cdn_game_data_accessible'] = bool(b and pbp)
+          report['can_attempt_2026_player_quarters'] = bool(chosen and b and pbp)
+          Path('exports/v4_source_probe/source_report.json').write_text(
+              json.dumps(report, indent=2) + '\n', encoding='utf-8')
+          print('Probe completed. No database or research exports were modified.', flush=True)
+          if not report['can_attempt_2026_player_quarters']:
+              sys.exit('No verified source path to a 2026-11-22 game yet; inspect source_report.json')
+          PY
+
+      - name: Upload source report on success or failure
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: nba-v4-cdn-source-diagnostics
+          path: exports/v4_source_probe/source_report.json
+          if-no-files-found: warn
+          retention-days: 14
