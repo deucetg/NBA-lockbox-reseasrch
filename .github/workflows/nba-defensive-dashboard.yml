@@ -8,6 +8,7 @@ on:
 
 permissions:
   contents: write
+  actions: read
 
 concurrency:
   group: nba-lockbox-defensive-dashboard
@@ -26,6 +27,80 @@ jobs:
         with:
           python-version: '3.11'
 
+      # Restore the latest collected database.
+      # Never generate research from stale SQLite data.
+      - name: Restore latest collected database
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p data /tmp/nba-lockbox-restore
+
+          run_id=$(gh run list \
+            --repo "$GITHUB_REPOSITORY" \
+            --workflow nba-research.yml \
+            --limit 20 \
+            --json databaseId,conclusion \
+            --jq '[.[] | select(.conclusion == "success")][0].databaseId')
+
+          if [ -z "$run_id" ] || [ "$run_id" = "null" ]; then
+            echo 'No successful Daily Research run found'
+            exit 1
+          fi
+
+          gh run download "$run_id" \
+            --repo "$GITHUB_REPOSITORY" \
+            --name nba-lockbox-database \
+            --dir /tmp/nba-lockbox-restore
+
+          test -s /tmp/nba-lockbox-restore/nba_lockbox.sqlite
+          cp /tmp/nba-lockbox-restore/nba_lockbox.sqlite data/nba_lockbox.sqlite
+
+          python - <<'PY'
+          import sqlite3
+          from datetime import datetime, timezone
+          from pathlib import Path
+
+          p = Path('data/nba_lockbox.sqlite')
+
+          with sqlite3.connect(p) as db:
+              assert db.execute(
+                  'PRAGMA integrity_check'
+              ).fetchone()[0] == 'ok'
+
+              games = db.execute(
+                  'SELECT COUNT(*) FROM games'
+              ).fetchone()[0]
+
+              latest = db.execute(
+                  'SELECT MAX(game_date) FROM games'
+              ).fetchone()[0]
+
+              pending = db.execute('''
+                  SELECT COUNT(*) FROM games
+                  WHERE game_id NOT IN (
+                      SELECT game_id FROM boxscore_imports
+                  )
+              ''').fetchone()[0]
+
+          age_days = (
+              datetime.now(timezone.utc).date()
+              - datetime.strptime(latest, '%Y%m%d').date()
+          ).days
+
+          print(
+              f'Games: {games}, '
+              f'Latest: {latest}, '
+              f'Pending: {pending}, '
+              f'Age: {age_days} days'
+          )
+
+          assert games > 0
+          assert pending == 0, 'Incomplete backup'
+          assert 0 <= age_days <= 3, 'Database is stale'
+          PY
+
       - name: Generate player research exports
         run: python nba_research_export.py
 
@@ -42,11 +117,15 @@ jobs:
         run: python nba_upcoming_matchups.py
 
       - name: Commit research reports
-        if: always()
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          # Do not commit the temporary restored database.
+          git restore -- data/nba_lockbox.sqlite
+
           git add research_exports/
+
           if ! git diff --cached --quiet; then
             git commit -m "Refresh NBA LOCKBOX matchup intelligence"
             git pull --rebase origin main
@@ -54,7 +133,6 @@ jobs:
           fi
 
       - name: Upload research backup
-        if: always()
         uses: actions/upload-artifact@v4
         with:
           name: nba-lockbox-matchup-intelligence
