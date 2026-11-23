@@ -1,0 +1,100 @@
+name: NBA LOCKBOX V4 ESPN Player Quarter Rebuild
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: read
+
+concurrency:
+  group: nba-lockbox-v4-espn-quarter-rebuild
+  cancel-in-progress: false
+
+jobs:
+  rebuild:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Check parser syntax
+        run: python -m py_compile nba_espn_player_quarter_rebuild_v4.py
+
+      - name: Restore fresh Daily Research database artifact
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          mkdir -p data /tmp/quarter-v4-db
+          run_id=$(gh run list \
+            --repo "$GITHUB_REPOSITORY" \
+            --workflow nba-research.yml \
+            --limit 20 \
+            --json databaseId,conclusion \
+            --jq '[.[] | select(.conclusion == "success")][0].databaseId')
+          if [ -z "$run_id" ] || [ "$run_id" = "null" ]; then
+            echo 'No successful Daily Research workflow found' >&2
+            exit 1
+          fi
+          echo "Restoring Daily Research backup from run $run_id"
+          gh run download "$run_id" \
+            --repo "$GITHUB_REPOSITORY" \
+            --name nba-lockbox-database \
+            --dir /tmp/quarter-v4-db
+          test -s /tmp/quarter-v4-db/nba_lockbox.sqlite
+          cp /tmp/quarter-v4-db/nba_lockbox.sqlite data/nba_lockbox.sqlite
+          python - <<'PY'
+          from datetime import datetime, timezone
+          import sqlite3
+          from pathlib import Path
+          p = Path('data/nba_lockbox.sqlite')
+          with sqlite3.connect(p) as db:
+              assert db.execute('PRAGMA integrity_check').fetchone()[0] == 'ok'
+              games = db.execute('SELECT COUNT(*) FROM games').fetchone()[0]
+              plays = db.execute('SELECT COUNT(*) FROM pbp_events').fetchone()[0]
+              boxes = db.execute('SELECT COUNT(*) FROM player_boxscores').fetchone()[0]
+              last = db.execute('SELECT MAX(game_date) FROM games').fetchone()[0]
+              assert games > 0 and plays > 0 and boxes > 0
+              assert last is not None
+              age = (datetime.now(timezone.utc).date() -
+                     datetime.strptime(last,'%Y%m%d').date()).days
+              print(f'Games={games}, Events={plays}, Boxes={boxes}, Latest={last}, Age={age} days')
+              assert 0 <= age <= 3, 'Backup stale: no player-quarter research from stale DB'
+          PY
+
+      - name: Reconstruct actual player quarter stats from saved ESPN events
+        run: |
+          python nba_espn_player_quarter_rebuild_v4.py \
+            --db data/nba_lockbox.sqlite \
+            --start-date 20261001 \
+            --end-date 20270630 \
+            --out exports/espn_player_quarters_v4
+
+      - name: Require reconciled games and verified timing research
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          audit=json.loads(Path('exports/espn_player_quarters_v4/rebuild_audit.json').read_text())
+          assert audit['period_score_verified_games'] > 0
+          assert audit['verified_threshold_timing_rows'] > 0
+          print('Validated rebuilt player-quarter research:')
+          print(json.dumps(audit, indent=2))
+          PY
+
+      - name: Upload reports without modifying repository data
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: nba-lockbox-espn-player-quarter-v4
+          path: exports/espn_player_quarters_v4/
+          if-no-files-found: warn
+          retention-days: 21
