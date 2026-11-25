@@ -49,16 +49,16 @@ team_id,window,sample_n,scored_avg,allowed_avg,equal_scoring,validation
 18,L8,8,107.88,102.12,no,verified
 18,L12,12,108.58,100.58,no,verified
 18,L20,17,108.94,103.24,no,insufficient game logs
-19,L3,3,108.33,116.0,no,verified
-19,L5,5,109.4,110.4,no,verified
-19,L8,8,112.0,110.75,no,verified
-19,L12,12,109.33,110.67,no,verified
-19,L20,16,108.75,112.88,no,insufficient game logs
-2,L3,3,94.67,96.67,no,verified
-2,L5,5,104.0,99.8,no,verified
-2,L8,8,107.25,98.75,no,verified
-2,L12,12,107.25,98.17,no,verified
-2,L20,17,111.24,102.12,no,insufficient game logs
+19,L3,3,98.33,110.33,no,verified
+19,L5,5,105.2,111.4,no,verified
+19,L8,8,107.88,108.0,no,verified
+19,L12,12,106.42,109.83,no,verified
+19,L20,17,107.41,112.35,no,insufficient game logs
+2,L3,3,104.67,100.33,no,verified
+2,L5,5,104.0,104.2,no,verified
+2,L8,8,109.0,101.12,no,verified
+2,L12,12,109.17,99.75,no,verified
+2,L20,18,112.33,102.89,no,insufficient game logs
 20,L3,3,121.33,124.33,no,verified
 20,L5,5,126.0,124.0,no,verified
 20,L8,8,122.62,122.0,no,verified
@@ -94,11 +94,11 @@ team_id,window,sample_n,scored_avg,allowed_avg,equal_scoring,validation
 26,L8,8,109.75,112.25,no,verified
 26,L12,12,108.33,113.33,no,verified
 26,L20,19,107.84,115.37,no,insufficient game logs
-27,L3,3,105.67,96.33,no,verified
-27,L5,5,111.2,114.4,no,verified
-27,L8,8,113.5,119.0,no,verified
-27,L12,12,110.25,118.25,no,verified
-27,L20,18,110.33,115.39,no,insufficient game logs
+27,L3,3,110.0,107.0,no,verified
+27,L5,5,110.6,111.2,no,verified
+27,L8,8,114.12,120.12,no,verified
+27,L12,12,111.33,121.33,no,verified
+27,L20,19,110.63,116.21,no,insufficient game logs
 28,L3,3,105.0,107.0,no,verified
 28,L5,5,105.0,108.8,no,verified
 28,L8,8,104.0,110.38,no,verified
@@ -129,21 +129,21 @@ team_id,window,sample_n,scored_avg,allowed_avg,equal_scoring,validation
 5,L8,8,119.75,120.12,no,verified
 5,L12,12,116.83,117.17,no,verified
 5,L20,18,118.22,116.78,no,insufficient game logs
-6,L3,3,114.0,102.67,no,verified
-6,L5,5,110.6,113.2,no,verified
-6,L8,8,112.75,114.25,no,verified
-6,L12,12,111.75,112.67,no,verified
-6,L20,17,112.41,112.47,no,insufficient game logs
-7,L3,3,129.67,123.33,no,verified
-7,L5,5,122.0,119.0,no,verified
-7,L8,8,118.38,115.62,no,verified
-7,L12,12,118.0,113.58,no,verified
-7,L20,15,117.0,115.2,no,insufficient game logs
-8,L3,3,107.0,107.0,yes,verified
-8,L5,5,108.6,110.2,no,verified
-8,L8,8,115.62,115.38,no,verified
-8,L12,12,113.5,109.08,no,verified
-8,L20,16,113.38,108.56,no,insufficient game logs
+6,L3,3,115.33,105.0,no,verified
+6,L5,5,111.2,108.0,no,verified
+6,L8,8,111.5,115.25,no,verified
+6,L12,12,112.08,111.83,no,verified
+6,L20,18,112.83,111.83,no,insufficient game logs
+7,L3,3,128.33,129.67,no,verified
+7,L5,5,119.0,121.4,no,verified
+7,L8,8,116.75,117.88,no,verified
+7,L12,12,117.75,116.0,no,verified
+7,L20,16,116.0,115.5,no,insufficient game logs
+8,L3,3,101.0,99.33,no,verified
+8,L5,5,106.0,100.0,no,verified
+8,L8,8,114.12,111.0,no,verified
+8,L12,12,114.08,108.83,no,verified
+8,L20,17,112.82,107.24,no,insufficient game logs
 9,L3,3,93.33,109.67,no,verified
 9,L5,5,91.8,113.4,no,verified
 9,L8,8,103.88,111.0,no,verified

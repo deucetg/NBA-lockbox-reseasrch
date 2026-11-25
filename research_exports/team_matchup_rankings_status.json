@@ -1,12 +1,12 @@
 {
-  "generated_at_utc": "2026-11-24T13:57:22.743725+00:00",
+  "generated_at_utc": "2026-11-25T13:57:31.869180+00:00",
   "season": "2026-27",
   "input_rows": 150,
   "complete_rows": 120,
-  "identical_scoring_rows": 1,
+  "identical_scoring_rows": 0,
   "systemic_scoring_issue": false,
   "ranking_rows": 1080,
-  "audit_flags": 31,
+  "audit_flags": 30,
   "notes": [
     "Ranks opponent box-score allowances, not player-specific odds.",
     "Official pace and defensive schemes are not available.",
