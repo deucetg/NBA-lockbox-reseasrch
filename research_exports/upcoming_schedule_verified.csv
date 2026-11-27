@@ -49,3 +49,8 @@ game_id,scheduled_utc,home_team_id,away_team_id,home_team_name,away_team_name,ev
 401910082,2026-12-03T01:00Z,25,17,Oklahoma City Thunder,Brooklyn Nets,STATUS_SCHEDULED,ESPN scoreboard
 401910083,2026-12-03T02:00Z,21,23,Phoenix Suns,Sacramento Kings,STATUS_SCHEDULED,ESPN scoreboard
 401910084,2026-12-03T03:30Z,12,16,LA Clippers,Minnesota Timberwolves,STATUS_SCHEDULED,ESPN scoreboard
+401910085,2026-12-04T00:00Z,1,11,Atlanta Hawks,Indiana Pacers,STATUS_SCHEDULED,ESPN scoreboard
+401910086,2026-12-04T00:30Z,14,27,Miami Heat,Washington Wizards,STATUS_SCHEDULED,ESPN scoreboard
+401910087,2026-12-04T01:00Z,4,5,Chicago Bulls,Cleveland Cavaliers,STATUS_SCHEDULED,ESPN scoreboard
+401910088,2026-12-04T01:00Z,24,28,San Antonio Spurs,Toronto Raptors,STATUS_SCHEDULED,ESPN scoreboard
+401910089,2026-12-04T03:00Z,22,26,Portland Trail Blazers,Utah Jazz,STATUS_SCHEDULED,ESPN scoreboard
