@@ -1,9 +1,9 @@
 {
-  "generated_at_utc": "2026-11-27T13:58:31.681844+00:00",
+  "generated_at_utc": "2026-11-28T13:46:03.037004+00:00",
   "season": "2026-27",
-  "latest_game_date": "20261125",
+  "latest_game_date": "20261127",
   "eligible_teams": 30,
-  "eligible_games": 270,
+  "eligible_games": 281,
   "excluded_games": 0,
   "dashboard_rows": 150,
   "notes": [

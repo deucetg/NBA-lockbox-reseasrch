@@ -1,10 +1,10 @@
 {
-  "generated_at_utc": "2026-11-27T13:58:34.047501+00:00",
-  "validated_team_windows": 120,
+  "generated_at_utc": "2026-11-28T13:46:05.960933+00:00",
+  "validated_team_windows": 127,
   "team_windows_checked": 150,
-  "equal_scoring_verified": 0,
-  "incomplete_or_unavailable": 30,
+  "equal_scoring_verified": 1,
+  "incomplete_or_unavailable": 23,
   "mismatches": 0,
-  "player_research_rows": 2410,
+  "player_research_rows": 2420,
   "note": "No opponent mapping or official defensive ratings inferred. Historical research only."
 }
